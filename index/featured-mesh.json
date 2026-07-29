@@ -1,0 +1,196 @@
+{
+  "schema": "clrty.design_a_token.featured_mesh/v1",
+  "count": 38,
+  "featured": [
+    {
+      "label": "Clarity Home",
+      "href": "https://www.clarity-fintech.com/",
+      "lane": "product"
+    },
+    {
+      "label": "Tokens Live",
+      "href": "https://tokens.clarity-fintech.com/",
+      "lane": "product"
+    },
+    {
+      "label": "Tokens Pages",
+      "href": "https://clarity-tokens.pages.dev/",
+      "lane": "product"
+    },
+    {
+      "label": "CLRTY-1 RPC",
+      "href": "https://rpc.clarity-fintech.com",
+      "lane": "infra"
+    },
+    {
+      "label": "API Gateway",
+      "href": "https://api.clarity-fintech.com",
+      "lane": "infra"
+    },
+    {
+      "label": "API Status",
+      "href": "https://api.clarity-fintech.com/v1/status",
+      "lane": "infra"
+    },
+    {
+      "label": "Explorer SCOPE",
+      "href": "https://network-monitor-d1g.pages.dev/explorer/?portal=rpc&q=CLRTY",
+      "lane": "infra"
+    },
+    {
+      "label": "Network Monitor",
+      "href": "https://network-monitor-d1g.pages.dev/",
+      "lane": "infra"
+    },
+    {
+      "label": "Browser HUD",
+      "href": "https://network-monitor-d1g.pages.dev/browser/",
+      "lane": "infra"
+    },
+    {
+      "label": "Status",
+      "href": "https://status.clarity-fintech.com/",
+      "lane": "infra"
+    },
+    {
+      "label": "Enterprise",
+      "href": "https://www.clarity-fintech.com/clarity-enterprise/",
+      "lane": "product"
+    },
+    {
+      "label": "Merchant",
+      "href": "https://exchange.clarity-fintech.com/merchant/",
+      "lane": "product"
+    },
+    {
+      "label": "Spark Merchant",
+      "href": "https://www.clarity-fintech.com/spark-merchant/",
+      "lane": "product"
+    },
+    {
+      "label": "Exchange",
+      "href": "https://exchange.clarity-fintech.com/",
+      "lane": "product"
+    },
+    {
+      "label": "Wallet App",
+      "href": "https://exchange.clarity-fintech.com/wallet-app",
+      "lane": "product"
+    },
+    {
+      "label": "Create Wallet",
+      "href": "https://exchange.clarity-fintech.com/login",
+      "lane": "product"
+    },
+    {
+      "label": "Buy $CLRTY",
+      "href": "https://exchange.clarity-fintech.com/buy.html",
+      "lane": "product"
+    },
+    {
+      "label": "Skills",
+      "href": "https://www.clarity-fintech.com/skills/",
+      "lane": "product"
+    },
+    {
+      "label": "HELIX",
+      "href": "https://www.clarity-fintech.com/helix/",
+      "lane": "product"
+    },
+    {
+      "label": "MIRRA",
+      "href": "https://www.clarity-fintech.com/mirra/",
+      "lane": "product"
+    },
+    {
+      "label": "CLRTY PAY",
+      "href": "https://pay.clarity-fintech.com/",
+      "lane": "product"
+    },
+    {
+      "label": "Agent Registry",
+      "href": "https://www.clarity-fintech.com/products/agent-registry.html",
+      "lane": "product"
+    },
+    {
+      "label": "Docs",
+      "href": "https://www.clarity-fintech.com/docs/",
+      "lane": "docs"
+    },
+    {
+      "label": "Developer",
+      "href": "https://www.clarity-fintech.com/developer/",
+      "lane": "docs"
+    },
+    {
+      "label": "GitBook",
+      "href": "https://docs.clarity-fintech.com/",
+      "lane": "docs"
+    },
+    {
+      "label": "GitBook Moniversive",
+      "href": "https://clarity-7.gitbook.io/clarity-docs/clarity-moniversive-invariant-static-mis",
+      "lane": "docs"
+    },
+    {
+      "label": "Labs",
+      "href": "https://www.clarity-fintech.com/labs/",
+      "lane": "product"
+    },
+    {
+      "label": "Labs Browser",
+      "href": "https://labs.clarity-fintech.com/browser/",
+      "lane": "product"
+    },
+    {
+      "label": "Faucet",
+      "href": "https://www.clarity-fintech.com/faucet/",
+      "lane": "product"
+    },
+    {
+      "label": "Blockchain",
+      "href": "https://www.clarity-fintech.com/blockchain/",
+      "lane": "product"
+    },
+    {
+      "label": "Network",
+      "href": "https://clrty.network/",
+      "lane": "product"
+    },
+    {
+      "label": "CIF Fellowship",
+      "href": "https://network-monitor-d1g.pages.dev/fellowship/",
+      "lane": "product"
+    },
+    {
+      "label": "Active sitemap",
+      "href": "https://seo-kit-second.clarity-fintech.com/sitemap-active-links.xml",
+      "lane": "seo"
+    },
+    {
+      "label": "DX sitemap",
+      "href": "https://seo-kit-second.clarity-fintech.com/sitemap-dx-live-links.xml",
+      "lane": "seo"
+    },
+    {
+      "label": "SEO hub",
+      "href": "https://seo-kit-second.clarity-fintech.com/health",
+      "lane": "seo"
+    },
+    {
+      "label": "Notion Docs",
+      "href": "https://app.notion.com/p/clrty-1/Clarity-Documentation-39e5f7f81f9e80f69925c59cf6b07173",
+      "lane": "docs"
+    },
+    {
+      "label": "GitHub clarity-fintech",
+      "href": "https://github.com/clarity-fintech",
+      "lane": "dx"
+    },
+    {
+      "label": "GitHub moniversive",
+      "href": "https://github.com/clarity-fintech/moniversive_invariant_static_ML",
+      "lane": "dx"
+    }
+  ]
+}

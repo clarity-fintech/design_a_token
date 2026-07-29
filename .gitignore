@@ -1,0 +1,17 @@
+node_modules/
+dist/
+site/dist/
+packages/sdk/dist/
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+test-results/
+playwright-report/
+.playwright/
+coverage/
+*.tsbuildinfo
+.wrangler/
+clarity-tokens-pages/
+out/

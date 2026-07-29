@@ -1,0 +1,34 @@
+{
+  "schema": "clrty.token_extensions.hash_trace/v1",
+  "updated_at": "2026-07-29T20:13:41Z",
+  "chain_id": 1202,
+  "settlement_network": "clrty-1",
+  "kernel": "misc",
+  "program": "design_a_token",
+  "modules": [
+    {
+      "path": "mis/MisClrtyTokenExtensions.mis",
+      "sha256": "66f39a1443fb9042a9f849941082dc6afbc0b3edc808d2caba3f4d81afc370eb",
+      "bytes": 3927,
+      "@": "@CLRTY.TokenExtensions#66f39a1443fb9042"
+    },
+    {
+      "path": "mis/MisClrtyTokenExtensionsHarness.mis",
+      "sha256": "cd680fd3c6d28bd76478a6a8b30a481f09d80144e2a010560cb9b34b1a20d5ae",
+      "bytes": 3254,
+      "@": "@CLRTY.TokenExtensions#cd680fd3c6d28bd7"
+    },
+    {
+      "path": "mis/MisClrtyTokenExtensionsInvariants.mis",
+      "sha256": "e8eaa102e3f5b3d18b773b2b0b41adffbc9bf8b4d0cf18c9ea8197331200cf51",
+      "bytes": 19753,
+      "@": "@CLRTY.TokenExtensions#e8eaa102e3f5b3d1"
+    },
+    {
+      "path": "mis/clrty_token_extensions_integration_matrix.mis",
+      "sha256": "b73575eb80f0ef03cbb4eb36110cfe40cc884379cf4514c4d148dd03baf6b9d6",
+      "bytes": 9313,
+      "@": "@CLRTY.TokenExtensions#b73575eb80f0ef03"
+    }
+  ]
+}

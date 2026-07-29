@@ -1,0 +1,39 @@
+{
+  "name": "@clrty/design-a-token-sdk",
+  "version": "1.0.0",
+  "description": "Design and connect CLRTY-1 Token Extensions (.mis-native) with hash-trace @ tagging.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "clrty",
+    "clrty-1",
+    "mis",
+    "token-extensions",
+    "hash-trace"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clarity-fintech/design_a_token.git",
+    "directory": "packages/sdk"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.2"
+  }
+}

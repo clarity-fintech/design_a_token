@@ -1,0 +1,25 @@
+{
+  "schema": "clrty.clarity_tokens.page/v1",
+  "updated_at": "2026-07-29T18:25:00Z",
+  "title": "CLRTY Token Extensions",
+  "public_url": "https://www.clarity-fintech.com/clarity-tokens/",
+  "pages_url": "https://network-monitor-d1g.pages.dev/clarity-tokens/",
+  "repo_path": "frontend/clarity-tokens",
+  "build_output": "var/pages/network-monitor-d1g/clarity-tokens",
+  "chain_id": 1202,
+  "settlement_network": "clrty-1",
+  "rpc": "https://rpc.clarity-fintech.com",
+  "api": "https://api.clarity-fintech.com",
+  "nanotasks": 100,
+  "module": "clarity.mis.nanotasks.clrty_token_extensions_integration_matrix",
+  "kernel": "misc",
+  "extensions": 10,
+  "categories": 13,
+  "cherry": {
+    "vds": 939850,
+    "host": "84.32.109.227",
+    "region": "Lithuania"
+  },
+  "latency_hard_cap_ms": 399,
+  "uclrty_fixed_supply": 16000000
+}

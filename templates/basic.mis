@@ -1,0 +1,25 @@
+# Designed token template — CLRTY-1 Token Extensions
+
+module CLRTY.TokenExtensions.BasicAsset {
+
+  invariant settlement_chain: chain_id == 1202;
+  invariant settlement_network_clrty1: settlement_network == clrty_1;
+  invariant kernel_is_misc: compiler_kernel == misc;
+  invariant program_language_mis: contract_language == mis;
+
+  outcome fn_init(ctx: Bytes) {
+    require ctx != @0;
+    constraint owner_initialized == true;
+    constraint metadata_pointer_enabled == true;
+  }
+
+  outcome fn_mint(ctx: Bytes) {
+    require ctx != @0;
+    constraint supply_within_cap == true;
+  }
+
+  outcome fn_transfer(ctx: Bytes) {
+    require ctx != @0;
+    constraint amount_positive == true;
+  }
+}

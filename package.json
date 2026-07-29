@@ -1,0 +1,50 @@
+{
+  "name": "@clrty/design-a-token",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Design a token on CLRTY-1 — Token Extensions kit: .mis contracts, hash-trace @ tagging, 100 nano tasks (CTE001–CTE100), 192 nano-harvest index, backlink pack, SDK, and React surface.",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clarity-fintech/design_a_token.git"
+  },
+  "homepage": "https://tokens.clarity-fintech.com/",
+  "bugs": {
+    "url": "https://github.com/clarity-fintech/design_a_token/issues"
+  },
+  "workspaces": [
+    "site",
+    "packages/sdk"
+  ],
+  "bin": {
+    "design-a-token": "./scripts/design_token.mjs",
+    "clrty1-connect": "./scripts/connect_clrty1.mjs"
+  },
+  "scripts": {
+    "build": "npm run build:sdk && npm run build:site",
+    "build:site": "npm run build -w @clrty/clarity-tokens-landing",
+    "build:sdk": "npm run build -w @clrty/design-a-token-sdk",
+    "dev": "npm run dev -w @clrty/clarity-tokens-landing",
+    "pack:index": "python3 scripts/sync_from_clarity_tokens.py",
+    "hash:trace": "python3 scripts/hash_trace.py",
+    "hash:stamp": "python3 scripts/hash_trace.py --stamp",
+    "check:mis": "bash scripts/check_mis.sh",
+    "connect": "node scripts/connect_clrty1.mjs",
+    "design": "node scripts/design_token.mjs",
+    "verify:pack": "node scripts/verify_pack.mjs",
+    "test:e2e": "cd site && npx playwright test --config=playwright.config.ts",
+    "verify": "npm run verify:pack && npm run connect && npm run check:mis"
+  },
+  "keywords": [
+    "clrty",
+    "clrty-1",
+    "token-extensions",
+    "mis",
+    "hash-trace",
+    "clarity-fintech",
+    "design-a-token"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}

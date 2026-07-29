@@ -1,0 +1,35 @@
+name: design_a_token
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - run: npm run build:sdk
+      - run: npm run verify:pack
+      - run: npm run hash:trace
+      - run: python3 scripts/hash_trace.py --check
+      - run: npm run connect
+        continue-on-error: false
+      - run: npm run build:site
+      - run: npm run design -- --name "CI Demo" --symbol CIDEMO --out ./out/CIDEMO.mis
+      - name: misc check (optional)
+        env:
+          MISC_BIN: ${{ secrets.MISC_BIN }}
+        run: |
+          if [[ -n "${MISC_BIN:-}" && -x "$MISC_BIN" ]]; then
+            bash scripts/check_mis.sh
+          else
+            echo "misc kernel not provisioned in CI — skip compile gate"
+          fi

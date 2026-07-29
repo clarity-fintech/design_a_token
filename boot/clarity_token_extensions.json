@@ -1,0 +1,115 @@
+{
+  "schema": "clrty.token_extensions_ecosystem/v1",
+  "updated_at": "2026-07-29T16:35:35Z",
+  "title": "CLRTY Token Extensions",
+  "tagline": "Create programmable assets on CLRTY-1",
+  "language": ".mis",
+  "public_url": "https://www.clarity-fintech.com/clarity-tokens/",
+  "canonical": "https://www.clarity-fintech.com/clarity-tokens/",
+  "chain": {
+    "id": "clrty-1",
+    "numeric": 1202,
+    "rpc": "https://rpc.clarity-fintech.com",
+    "api": "https://api.clarity-fintech.com"
+  },
+  "settlement": {
+    "network": "clrty-1",
+    "chain_id": 1202
+  },
+  "token": {
+    "symbol": "uclrty",
+    "fixed_supply": 16000000,
+    "mint_authority": null,
+    "freeze_authority": null
+  },
+  "latency": {
+    "hard_cap_ms": 399,
+    "band_ms": [
+      398.1,
+      398.5
+    ]
+  },
+  "infra": {
+    "cloudflare_pages_route": "/clarity-tokens/",
+    "pages_out_dir": "var/pages/network-monitor-d1g/clarity-tokens",
+    "cherry": {
+      "vds": 939850,
+      "host": "84.32.109.227",
+      "region": "Lithuania"
+    },
+    "legacy_html": "frontend/tools/token-extensions.html"
+  },
+  "modules": {
+    "nanotasks": "moniversive/nanotasks/clrty_token_extensions_integration_matrix.mis",
+    "program": "moniversive/framework/token/MisClrtyTokenExtensions.mis",
+    "harness": "moniversive/framework/token/MisClrtyTokenExtensionsHarness.mis",
+    "invariants": "moniversive/framework/token/MisClrtyTokenExtensionsInvariants.mis",
+    "frontend": "frontend/clarity-tokens"
+  },
+  "extension_categories": [
+    {
+      "category": "Confidentiality",
+      "purpose": "Private institutional transfers"
+    },
+    {
+      "category": "Compliance",
+      "purpose": "Regulated asset controls"
+    },
+    {
+      "category": "Payments",
+      "purpose": "Enterprise settlement"
+    },
+    {
+      "category": "Metadata",
+      "purpose": "Digital asset identity"
+    },
+    {
+      "category": "Governance",
+      "purpose": "Community and protocol control"
+    },
+    {
+      "category": "Yield",
+      "purpose": "Financial optimization"
+    },
+    {
+      "category": "AI Agents",
+      "purpose": "Autonomous execution"
+    },
+    {
+      "category": "RWA",
+      "purpose": "Real-world asset tokenization"
+    },
+    {
+      "category": "Enterprise",
+      "purpose": "Institutional infrastructure"
+    },
+    {
+      "category": ".mis Contracts",
+      "purpose": "Native programmable asset logic"
+    },
+    {
+      "category": "HELIX Integration",
+      "purpose": "Execution optimization"
+    },
+    {
+      "category": "MIRRA Integration",
+      "purpose": "Private financial markets"
+    },
+    {
+      "category": "CLARITY Skills",
+      "purpose": "Modular financial capabilities"
+    }
+  ],
+  "asset_types": [
+    "currencies",
+    "stablecoins",
+    "enterprise assets",
+    "loyalty systems",
+    "governance tokens",
+    "RWA tokens",
+    "payment assets",
+    "financial instruments",
+    "AI-native assets",
+    "automated treasury systems"
+  ]
+}
