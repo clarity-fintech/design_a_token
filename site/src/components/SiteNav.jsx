@@ -8,6 +8,7 @@ const NAV = [
   { href: "#extensions", label: "Extensions" },
   { href: "#sdk", label: "SDK" },
   { href: "#clrty1-routing", label: "CLRTY-1" },
+  { href: "#database-cross-route", label: "Database" },
   { href: "#developer-docs", label: "Docs" },
   { href: "#legal-compliance", label: "Legal" },
   { href: "#connect", label: "Connect" },

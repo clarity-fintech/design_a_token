@@ -80,6 +80,20 @@ const token = designToken({
 // token.hashTrace["@"] → @CLRTY.TokenExtensions#…
 ```
 
+## Full-project database cross-route
+
+Every CLRTY database section is stamped into CLRTY-1:
+
+```bash
+# from monorepo
+make clrty1-full-project-cross-route
+```
+
+Artifacts:
+- `boot/clrty1_full_project_cross_route.json` — master mesh
+- `site/public/cross-route-pack.json` — UI slice
+- Site section `#database-cross-route`
+
 ## Verify everything
 
 ```bash

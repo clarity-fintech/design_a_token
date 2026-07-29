@@ -15,6 +15,7 @@ import NanoTaskStrip from "./components/NanoTaskStrip.jsx";
 import LaunchCTA from "./components/LaunchCTA.jsx";
 import LegalSection from "./components/LegalSection.jsx";
 import Clrty1RoutingPanel from "./components/Clrty1RoutingPanel.jsx";
+import DatabaseCrossRoutePanel from "./components/DatabaseCrossRoutePanel.jsx";
 import ConnectMesh from "./components/ConnectMesh.jsx";
 import Footer from "./components/Footer.jsx";
 
@@ -27,6 +28,7 @@ export default function App() {
         <Hero />
         <LiveMeshStrip />
         <Clrty1RoutingPanel />
+        <DatabaseCrossRoutePanel />
         <AssetMarquee />
         <StatsShowcase />
         <Thesis />
