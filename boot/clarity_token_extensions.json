@@ -1,6 +1,6 @@
 {
   "schema": "clrty.token_extensions_ecosystem/v1",
-  "updated_at": "2026-07-29T16:35:35Z",
+  "updated_at": "2026-07-29T20:24:48Z",
   "title": "CLRTY Token Extensions",
   "tagline": "Create programmable assets on CLRTY-1",
   "language": ".mis",
@@ -15,6 +15,20 @@
   "settlement": {
     "network": "clrty-1",
     "chain_id": 1202
+  },
+  "blockchain": {
+    "family": "moniversive",
+    "network": "clrty-1",
+    "chain_id": 1202,
+    "chain_id_hex": "0x4b2",
+    "kernel": "misc",
+    "language": ".mis",
+    "taxonomy": "mis_chain/mis_evm",
+    "ethereum": false,
+    "foreign_l1_settlement": false,
+    "policy": "CLRTY-1_MONIVERSIVE_ONLY_NO_ETH_SETTLEMENT",
+    "policy_manifest": "CLRTY_SUBSTRATE/boot/clrty1_moniversive_only_no_eth.json",
+    "json_rpc_note": "eth_chainId/eth_blockNumber are CLRTY-1 JSON-RPC method names — not Ethereum L1 settlement."
   },
   "token": {
     "symbol": "uclrty",
@@ -111,5 +125,12 @@
     "financial instruments",
     "AI-native assets",
     "automated treasury systems"
-  ]
+  ],
+  "full_project_cross_route": {
+    "manifest": "CLRTY_SUBSTRATE/boot/clrty1_full_project_cross_route.json",
+    "route_count": 1091,
+    "token_extension_routes": 110,
+    "status": "active",
+    "active": true
+  }
 }

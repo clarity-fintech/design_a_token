@@ -16,6 +16,9 @@ module MisClrtyTokenExtensionsInvariants {
   invariant no_python_kernel: python_package_code == false;
   invariant family_mis_chain: taxonomy_family == mis_chain;
   invariant branch_mis_evm: taxonomy_branch == mis_evm;
+  invariant no_ethereum_settlement: ethereum_mainnet_settlement == false;
+  invariant no_ethereum_chain_id_one: ethereum_chain_id_1_active == false;
+  invariant moniversive_home_chain: home_blockchain == moniversive;
   invariant creator_bound: creator == chandler_william_ferguson;
   invariant public_route_clarity_tokens: clarity_tokens_public_route == true;
   invariant latency_hard_cap_399ms: latency_hard_cap_ms == 399;

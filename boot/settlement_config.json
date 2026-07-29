@@ -1,0 +1,102 @@
+{
+  "treasury_name": "CLRTY Treasury (clrty-1)",
+  "portal_url": "https://invest.clrty.network",
+  "safe_address": "CLRTYTreas1111111111111111111111111111111",
+  "chain_id": 1202,
+  "network_name": "CLRTY-1",
+  "settlement_network": "clrty-1",
+  "settlement_chain_id": 1202,
+  "blockchain": {
+    "family": "moniversive",
+    "chain": "clrty-1",
+    "numeric_chain_id": 1202,
+    "chain_id_hex": "0x4b2",
+    "kernel": "misc",
+    "language": ".mis",
+    "ethereum": false,
+    "foreign_l1_refused": true,
+    "note": "Settlement is CLRTY-1 Moniversive ONLY. Never Ethereum / never foreign L1."
+  },
+  "usd_cents_per_clrty": 100,
+  "private_seed_cap_tokens": 2000000,
+  "total_genesis_supply_tokens": 16000000,
+  "decimals": 9,
+  "seed_genesis_min_usd_cents": 10000000,
+  "strategic_min_usd_cents": 50000000,
+  "reference_fx": {
+    "eth_usd_cents": 300000,
+    "note": "FX reference only — NOT a settlement chain. Deposits may be valued vs ETH/USD without settling on Ethereum."
+  },
+  "accepted_assets": [
+    {
+      "symbol": "USDC",
+      "asset_type": "clrty_stable_rail",
+      "decimals": 6,
+      "contract": null,
+      "role": "deposit_media",
+      "settlement": "clrty-1",
+      "deep_root": {
+        "language": "moniversive",
+        "dialect": "mis-ml",
+        "extension": ".mis",
+        "language_root": "CLRTY_SUBSTRATE/boot/moniversive_language_root.json",
+        "settlement_network": "clrty-1",
+        "settlement_chain_id": 1202,
+        "letter_hash": "sha256-rolling-typed-letter/v1"
+      }
+    },
+    {
+      "symbol": "USDT",
+      "asset_type": "clrty_stable_rail",
+      "decimals": 6,
+      "contract": null,
+      "role": "deposit_media",
+      "settlement": "clrty-1",
+      "deep_root": {
+        "language": "moniversive",
+        "dialect": "mis-ml",
+        "extension": ".mis",
+        "language_root": "CLRTY_SUBSTRATE/boot/moniversive_language_root.json",
+        "settlement_network": "clrty-1",
+        "settlement_chain_id": 1202,
+        "letter_hash": "sha256-rolling-typed-letter/v1"
+      }
+    },
+    {
+      "symbol": "uclrty",
+      "asset_type": "native",
+      "decimals": 9,
+      "contract": null,
+      "role": "native_gas_and_settlement",
+      "settlement": "clrty-1",
+      "deep_root": {
+        "language": "moniversive",
+        "dialect": "mis-ml",
+        "extension": ".mis",
+        "language_root": "CLRTY_SUBSTRATE/boot/moniversive_language_root.json",
+        "settlement_network": "clrty-1",
+        "settlement_chain_id": 1202,
+        "letter_hash": "sha256-rolling-typed-letter/v1"
+      }
+    }
+  ],
+  "refused_settlement_chains": [
+    {
+      "id": "ethereum-mainnet",
+      "chain_id": 1,
+      "reason": "Foreign L1 — CLRTY settlement is Moniversive CLRTY-1 only"
+    },
+    {
+      "id": "ethereum-sepolia",
+      "chain_id": 11155111,
+      "reason": "Foreign testnet refused"
+    }
+  ],
+  "treasury_label": "treasury:clrty-1",
+  "l1_treasury_address": "CLRTYTreas1111111111111111111111111111111",
+  "l1_chain_id": "clrty-1",
+  "l1_numeric_chain_id": 1202,
+  "eth_safe_status": "refused_not_settlement_chain",
+  "updated_at": "2026-07-29T21:00:00Z",
+  "policy": "CLRTY-1_MONIVERSIVE_ONLY_NO_ETH_SETTLEMENT"
+}

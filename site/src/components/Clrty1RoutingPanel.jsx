@@ -11,14 +11,16 @@ export default function Clrty1RoutingPanel() {
     <section id="clrty1-routing" className="border-y border-clarity-border px-5 py-20 md:py-28">
       <div className="mx-auto max-w-6xl">
         <ScrollReveal>
-          <p className="section-kicker">CLRTY-1 ONLY · settlement {CLRTY1.network} / {CLRTY1.chainId} / {CLRTY1.chainIdHex}</p>
+          <p className="section-kicker">
+            CLRTY-1 Moniversive ONLY · {CLRTY1.network} / {CLRTY1.chainId} / {CLRTY1.chainIdHex} · NO ETH
+          </p>
           <h2 className="display-title mt-3 text-3xl md:text-5xl">
             All routes settle on <span className="text-gradient">CLRTY-1</span>
           </h2>
           <p className="body-copy mt-4 max-w-3xl text-base">
-            Every Token Extensions surface — RPC tip, API gateway, Explorer SCOPE, Browser HUD, wallet,
-            exchange, HELIX, MIRRA, and PAY — wires into CLRTY-1 only (chain{" "}
-            {CLRTY1.chainId} / {CLRTY1.chainIdHex}). Never any other chain.
+            Built on the CLRTY-1 custom Moniversive blockchain (.mis · misc kernel · mis_chain/mis_evm).
+            JSON-RPC method names like eth_chainId are compatibility surface only — settlement is never
+            Ethereum. Every Token Extensions hop wires into chain {CLRTY1.chainId} / {CLRTY1.chainIdHex} only.
             {mesh.live ? " · LIVE" : mesh.refusedForeignChain ? " · REFUSED foreign chain" : " · probing"}
             {mesh.latencyMs != null ? ` · ${mesh.latencyMs}ms` : ""}.
           </p>

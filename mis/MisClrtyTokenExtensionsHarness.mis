@@ -12,6 +12,9 @@ module MisClrtyTokenExtensionsHarness {
   invariant settlement_chain: chain_id == 1202;
   invariant settlement_network_clrty1: settlement_network == clrty_1;
   invariant kernel_is_misc: compiler_kernel == misc;
+  invariant no_ethereum_settlement: ethereum_mainnet_settlement == false;
+  invariant no_ethereum_chain_id_one: ethereum_chain_id_1_active == false;
+  invariant moniversive_home_chain: home_blockchain == moniversive;
   invariant harness_spans_100_tasks: harness_task_count == 100;
   invariant harness_spans_10_tiers: harness_tier_count == 10;
   invariant public_route_clarity_tokens: clarity_tokens_public_route == true;

@@ -33,8 +33,9 @@
     "design": "node scripts/design_token.mjs",
     "verify:pack": "node scripts/verify_pack.mjs",
     "test:e2e": "cd site && npx playwright test --config=playwright.config.ts",
-    "verify": "npm run verify:pack && npm run connect && npm run check:mis",
-    "verify:clrty1-only": "node scripts/verify_clrty1_settlement_only.mjs"
+    "verify": "npm run verify:pack && npm run connect && npm run verify:clrty1-only",
+    "verify:clrty1-only": "node scripts/verify_clrty1_settlement_only.mjs",
+    "verify:no-eth": "python3 scripts/verify_clrty1_moniversive_no_eth.py"
   },
   "keywords": [
     "clrty",

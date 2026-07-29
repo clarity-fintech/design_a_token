@@ -1,0 +1,55 @@
+{
+  "schema": "clrty.moniversive_only_no_eth/v1",
+  "updated_at": "2026-07-29T21:00:00Z",
+  "creator": "Chandler William Ferguson",
+  "status": "active",
+  "active": true,
+  "policy": "CLRTY-1_MONIVERSIVE_ONLY_NO_ETH_SETTLEMENT",
+  "blockchain": {
+    "family": "moniversive",
+    "dialect": "mis-ml",
+    "language": ".mis",
+    "kernel": "misc",
+    "network": "clrty-1",
+    "chain_id": 1202,
+    "chain_id_hex": "0x4b2",
+    "rpc": "https://rpc.clarity-fintech.com",
+    "api": "https://api.clarity-fintech.com",
+    "ethereum": false,
+    "solana": false,
+    "foreign_l1_settlement": false
+  },
+  "json_rpc_note": "CLRTY-1 exposes EVM-compatible JSON-RPC method names (eth_chainId, eth_blockNumber) for tooling compatibility. That does NOT mean settlement on Ethereum. eth_chainId MUST return 0x4b2 (1202).",
+  "taxonomy": {
+    "family": "mis_chain",
+    "branch": "mis_evm",
+    "note": "mis_evm is the Moniversive EVM-compatible execution branch on CLRTY-1 — not Ethereum L1."
+  },
+  "refused_settlement_chains": [
+    { "id": "ethereum-mainnet", "chain_id": 1 },
+    { "id": "ethereum-sepolia", "chain_id": 11155111 },
+    { "id": "ethereum-goerli", "chain_id": 5 },
+    { "id": "polygon", "chain_id": 137 },
+    { "id": "base", "chain_id": 8453 },
+    { "id": "arbitrum", "chain_id": 42161 },
+    { "id": "optimism", "chain_id": 10 },
+    { "id": "bnb", "chain_id": 56 }
+  ],
+  "required_ssot": [
+    "CLRTY_SUBSTRATE/boot/l1_network_manifest.json",
+    "CLRTY_SUBSTRATE/boot/settlement_config.json",
+    "CLRTY_SUBSTRATE/boot/clarity_token_extensions.json",
+    "CLRTY_SUBSTRATE/boot/clrty1_wallet_network.json",
+    "moniversive/framework/token/MisClrtyTokenExtensions.mis"
+  ],
+  "verify": "scripts/verify_clrty1_moniversive_no_eth.py",
+  "deep_root": {
+    "language": "moniversive",
+    "dialect": "mis-ml",
+    "extension": ".mis",
+    "language_root": "CLRTY_SUBSTRATE/boot/moniversive_language_root.json",
+    "settlement_network": "clrty-1",
+    "settlement_chain_id": 1202,
+    "letter_hash": "sha256-rolling-typed-letter/v1"
+  }
+}

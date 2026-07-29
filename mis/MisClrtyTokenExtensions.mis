@@ -18,6 +18,9 @@ module MisClrtyTokenExtensions {
   invariant branch_mis_evm: taxonomy_branch == mis_evm;
   invariant program_language_mis: contract_language == mis;
   invariant no_foreign_token_program: solana_token_2022_active == false;
+  invariant no_ethereum_settlement: ethereum_mainnet_settlement == false;
+  invariant no_ethereum_chain_id_one: ethereum_chain_id_1_active == false;
+  invariant moniversive_home_chain: home_blockchain == moniversive;
   invariant extension_state_native: tlv_storage_model == false;
 
   // Extension type catalog — economic, privacy, compliance, execution, data, group, CLRTY-native
