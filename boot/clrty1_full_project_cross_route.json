@@ -1,6 +1,6 @@
 {
   "schema": "clrty.full_project_cross_route/v1",
-  "updated_at": "2026-07-29T20:19:39Z",
+  "updated_at": "2026-07-29T20:24:48Z",
   "creator": "Chandler William Ferguson",
   "settlement_network": "clrty-1",
   "settlement_chain_id": 1202,
@@ -32,13 +32,13 @@
     "monetization-layers/surfaces/cross_route.json"
   ],
   "counts": {
-    "routes_total": 1084,
-    "routes_complete": 1084,
+    "routes_total": 1091,
+    "routes_complete": 1091,
     "routes_with_href": 121,
-    "sections": 610,
-    "databases": 20,
+    "sections": 611,
+    "databases": 22,
     "by_database": {
-      "ext-mis-code-index": 137,
+      "ext-mis-code-index": 138,
       "ext-database-index": 332,
       "ext-clarity-content-database": 29,
       "ext-clrty-sections": 115,
@@ -54,13 +54,15 @@
       "ext-cloudflare-worker-kv": 1,
       "ext-sql-schema": 10,
       "ext-seo-kit-second": 1,
-      "ext-live-surfaces": 17,
-      "ext-token-extensions": 109,
-      "ext-link-index": 19,
-      "ext-monetization-cross-route": 27
+      "ext-token-extensions": 110,
+      "ext-design-a-token": 1,
+      "ext-live-surfaces": 18,
+      "ext-link-index": 20,
+      "ext-full-project-cross-route": 1,
+      "ext-monetization-cross-route": 28
     },
     "by_domain": {
-      "external_database": 16,
+      "external_database": 22,
       "boot_protocol": 92,
       "wallet_ux": 30,
       "website_blockchain": 32,
@@ -74,7 +76,7 @@
       "link_registry": 4,
       "token_extensions": 9,
       "token_extensions_nanotask": 100,
-      "mis_code_band": 90,
+      "mis_code_band": 91,
       "link_suite": 8,
       "link_index": 11,
       "sql_table": 9,
@@ -404,6 +406,126 @@
       "complete": true,
       "extra": {
         "role": null,
+        "complete": true
+      }
+    },
+    {
+      "id": "XR-DB-ext-token-extensions",
+      "database_id": "ext-token-extensions",
+      "section_id": "root",
+      "title": "ext-token-extensions",
+      "domain": "external_database",
+      "group": "token_extensions",
+      "path": "CLRTY_SUBSTRATE/boot/clarity_token_extensions.json",
+      "href": null,
+      "routed_href": null,
+      "settlement_network": "clrty-1",
+      "settlement_chain_id": 1202,
+      "status": "active",
+      "active": true,
+      "complete": true,
+      "extra": {
+        "role": "clrty_token_extensions_kit",
+        "complete": true
+      }
+    },
+    {
+      "id": "XR-DB-ext-design-a-token",
+      "database_id": "ext-design-a-token",
+      "section_id": "root",
+      "title": "ext-design-a-token",
+      "domain": "external_database",
+      "group": "github_kit",
+      "path": "external/clarity-fintech/design_a_token",
+      "href": null,
+      "routed_href": null,
+      "settlement_network": "clrty-1",
+      "settlement_chain_id": 1202,
+      "status": "active",
+      "active": true,
+      "complete": true,
+      "extra": {
+        "role": "design_a_token_repo",
+        "complete": true
+      }
+    },
+    {
+      "id": "XR-DB-ext-live-surfaces",
+      "database_id": "ext-live-surfaces",
+      "section_id": "root",
+      "title": "ext-live-surfaces",
+      "domain": "external_database",
+      "group": "live_surfaces",
+      "path": "CLRTY_SUBSTRATE/boot/clrty1_live_surfaces.json",
+      "href": null,
+      "routed_href": null,
+      "settlement_network": "clrty-1",
+      "settlement_chain_id": 1202,
+      "status": "active",
+      "active": true,
+      "complete": true,
+      "extra": {
+        "role": "clrty1_live_mesh",
+        "complete": true
+      }
+    },
+    {
+      "id": "XR-DB-ext-link-index",
+      "database_id": "ext-link-index",
+      "section_id": "root",
+      "title": "ext-link-index",
+      "domain": "external_database",
+      "group": "link_registry",
+      "path": "CLRTY_SUBSTRATE/boot/clrty_link_index.json",
+      "href": null,
+      "routed_href": null,
+      "settlement_network": "clrty-1",
+      "settlement_chain_id": 1202,
+      "status": "active",
+      "active": true,
+      "complete": true,
+      "extra": {
+        "role": "clrty_link_index",
+        "complete": true
+      }
+    },
+    {
+      "id": "XR-DB-ext-full-project-cross-route",
+      "database_id": "ext-full-project-cross-route",
+      "section_id": "root",
+      "title": "ext-full-project-cross-route",
+      "domain": "external_database",
+      "group": "cross_route",
+      "path": "CLRTY_SUBSTRATE/boot/clrty1_full_project_cross_route.json",
+      "href": null,
+      "routed_href": null,
+      "settlement_network": "clrty-1",
+      "settlement_chain_id": 1202,
+      "status": "active",
+      "active": true,
+      "complete": true,
+      "extra": {
+        "role": "full_project_database_mesh",
+        "complete": true
+      }
+    },
+    {
+      "id": "XR-DB-ext-monetization-cross-route",
+      "database_id": "ext-monetization-cross-route",
+      "section_id": "root",
+      "title": "ext-monetization-cross-route",
+      "domain": "external_database",
+      "group": "monetization",
+      "path": "monetization-layers/surfaces/cross_route.json",
+      "href": null,
+      "routed_href": null,
+      "settlement_network": "clrty-1",
+      "settlement_chain_id": 1202,
+      "status": "active",
+      "active": true,
+      "complete": true,
+      "extra": {
+        "role": "fee_surface_cross_route",
         "complete": true
       }
     },
@@ -15781,6 +15903,25 @@
       "complete": true,
       "extra": {
         "entry_count": 29
+      }
+    },
+    {
+      "id": "XR-MISBAND-clrty1_cross_route",
+      "database_id": "ext-mis-code-index",
+      "section_id": "clrty1_cross_route",
+      "title": "mis_code_index:clrty1_cross_route",
+      "domain": "mis_code_band",
+      "group": "mis_code_index",
+      "path": "CLRTY_SUBSTRATE/boot/mis_code_index.json",
+      "href": null,
+      "routed_href": null,
+      "settlement_network": "clrty-1",
+      "settlement_chain_id": 1202,
+      "status": "active",
+      "active": true,
+      "complete": true,
+      "extra": {
+        "entry_count": 1
       }
     },
     {

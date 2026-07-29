@@ -2,7 +2,7 @@
   "name": "@clrty/design-a-token",
   "version": "1.0.0",
   "private": false,
-  "description": "Design a token on CLRTY-1 — Token Extensions kit: .mis contracts, hash-trace @ tagging, 100 nano tasks (CTE001–CTE100), 192 nano-harvest index, backlink pack, SDK, and React surface.",
+  "description": "Design a token on CLRTY-1 \u2014 Token Extensions kit: .mis contracts, hash-trace @ tagging, 100 nano tasks (CTE001\u2013CTE100), 192 nano-harvest index, backlink pack, SDK, and React surface.",
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
@@ -33,7 +33,8 @@
     "design": "node scripts/design_token.mjs",
     "verify:pack": "node scripts/verify_pack.mjs",
     "test:e2e": "cd site && npx playwright test --config=playwright.config.ts",
-    "verify": "npm run verify:pack && npm run connect && npm run check:mis"
+    "verify": "npm run verify:pack && npm run connect && npm run check:mis",
+    "verify:clrty1-only": "node scripts/verify_clrty1_settlement_only.mjs"
   },
   "keywords": [
     "clrty",

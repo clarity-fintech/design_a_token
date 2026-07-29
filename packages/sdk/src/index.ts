@@ -286,7 +286,9 @@ export async function connectClrty1(opts?: {
   }
 }
 
-/** Append CLRTY-1 settlement query params to Clarity-owned URLs. */
+/** Append CLRTY-1 settlement query params to Clarity-owned URLs.
+ *  FORCE overwrite — NEVER leave another chain stamped.
+ */
 export function routeToClrty1(href: string, extra: Record<string, string | number> = {}): string {
   if (!href || href.startsWith("#") || href.startsWith("mailto:")) return href;
   try {
@@ -297,14 +299,39 @@ export function routeToClrty1(href: string, extra: Record<string, string | numbe
       host.endsWith("clrty.network") ||
       host.endsWith("pages.dev");
     if (!owned) return href;
-    if (!u.searchParams.has("network")) u.searchParams.set("network", CLRTY1.network);
-    if (!u.searchParams.has("chainId")) u.searchParams.set("chainId", String(CLRTY1.chainId));
-    if (!u.searchParams.has("settlement")) u.searchParams.set("settlement", "clrty-1");
+
+    for (const key of [...u.searchParams.keys()]) {
+      const lk = key.toLowerCase();
+      if (["network", "chainid", "chain_id", "chain", "settlement", "settlement_network"].includes(lk)) {
+        u.searchParams.delete(key);
+      }
+    }
+    u.searchParams.set("network", CLRTY1.network);
+    u.searchParams.set("chainId", String(CLRTY1.chainId));
+    u.searchParams.set("settlement", CLRTY1.network);
+
     for (const [k, v] of Object.entries(extra)) {
-      if (v != null && v !== "") u.searchParams.set(k, String(v));
+      if (v == null || v === "") continue;
+      const lk = k.toLowerCase();
+      if (lk === "chainid" || lk === "chain_id" || lk === "chain") {
+        if (String(v) !== String(CLRTY1.chainId) && String(v).toLowerCase() !== CLRTY1.chainIdHex) {
+          throw new Error(`REFUSED: ${k}=${v} — CLRTY-1 only (1202 / 0x4b2)`);
+        }
+        u.searchParams.set("chainId", String(CLRTY1.chainId));
+        continue;
+      }
+      if (lk === "network" || lk === "settlement" || lk === "settlement_network") {
+        if (String(v).toLowerCase() !== CLRTY1.network) {
+          throw new Error(`REFUSED: ${k}=${v} — CLRTY-1 only`);
+        }
+        u.searchParams.set(lk === "settlement_network" ? "settlement" : k, CLRTY1.network);
+        continue;
+      }
+      u.searchParams.set(k, String(v));
     }
     return u.toString();
-  } catch {
+  } catch (err) {
+    if (String((err as Error)?.message || err).startsWith("REFUSED:")) throw err;
     return href;
   }
 }

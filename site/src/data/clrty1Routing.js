@@ -1,4 +1,4 @@
-/** Canonical CLRTY-1 settlement + surface routing for Token Extensions. */
+/** Canonical CLRTY-1 settlement — NEVER any other chain. */
 export const CLRTY1 = {
   network: "clrty-1",
   chainId: 1202,
@@ -12,7 +12,42 @@ export const CLRTY1 = {
     kernel: "misc",
     language: ".mis",
   },
+  /** Hard policy: Token Extensions + all Clarity routing settle only here. */
+  onlyChain: true,
+  refusedNetworks: ["mainnet", "ethereum", "eth", "sepolia", "goerli", "polygon", "solana", "base", "arbitrum"],
 };
+
+const FOREIGN_CHAIN_KEYS = ["chainId", "chain_id", "chainid", "chain", "network", "settlement", "settlement_network"];
+
+/** True iff value is exactly CLRTY-1 chain 1202 / 0x4b2 / clrty-1. */
+export function isClrty1ChainId(value) {
+  if (value == null) return false;
+  if (typeof value === "number") return value === CLRTY1.chainId;
+  const s = String(value).trim().toLowerCase();
+  if (s === "clrty-1" || s === "clrty1") return true;
+  if (s === CLRTY1.chainIdHex) return true;
+  if (s === String(CLRTY1.chainId)) return true;
+  if (s.startsWith("0x")) {
+    try {
+      return parseInt(s, 16) === CLRTY1.chainId;
+    } catch {
+      return false;
+    }
+  }
+  const n = Number(s);
+  return Number.isFinite(n) && n === CLRTY1.chainId;
+}
+
+/** Throw if a foreign chain id / network is supplied. */
+export function assertClrty1Only(value, label = "chain") {
+  if (value == null || value === "") return CLRTY1.chainId;
+  if (isClrty1ChainId(value) || String(value).toLowerCase() === CLRTY1.network) {
+    return isClrty1ChainId(value) ? CLRTY1.chainId : CLRTY1.network;
+  }
+  throw new Error(
+    `REFUSED: ${label}=${value} — settlement is CLRTY-1 only (chainId=1202 / 0x4b2). NEVER any other chain.`,
+  );
+}
 
 /** Live CLRTY-1 mesh — mirrors CLRTY_SUBSTRATE/boot/clrty1_live_surfaces.json */
 export const CLRTY1_ROUTES = {
@@ -153,8 +188,8 @@ export const CLRTY1_ROUTES = {
 };
 
 /**
- * Append CLRTY-1 settlement context to Clarity-owned URLs so every hop
- * routes into chain 1202 / clrty-1.
+ * Force CLRTY-1 settlement on Clarity-owned URLs.
+ * OVERWRITES any foreign network / chainId / settlement — NEVER leaves another chain stamped.
  */
 export function routeToClrty1(href, extra = {}) {
   if (!href || href.startsWith("#") || href.startsWith("mailto:")) return href;
@@ -164,19 +199,73 @@ export function routeToClrty1(href, extra = {}) {
     const owned =
       host.endsWith("clarity-fintech.com") ||
       host.endsWith("clrty.network") ||
-      host.endsWith("pages.dev") ||
-      host.endsWith("pay.clarity-fintech.com");
+      host.endsWith("pages.dev");
     if (!owned) return href;
 
-    if (!u.searchParams.has("network")) u.searchParams.set("network", CLRTY1.network);
-    if (!u.searchParams.has("chainId")) u.searchParams.set("chainId", String(CLRTY1.chainId));
-    if (!u.searchParams.has("settlement")) u.searchParams.set("settlement", "clrty-1");
+    // Refuse / strip foreign chain params, then FORCE CLRTY-1 only.
+    for (const key of [...u.searchParams.keys()]) {
+      const lk = key.toLowerCase();
+      if (FOREIGN_CHAIN_KEYS.includes(lk) || FOREIGN_CHAIN_KEYS.includes(key)) {
+        const val = u.searchParams.get(key);
+        if (
+          lk.includes("chain") &&
+          val != null &&
+          !isClrty1ChainId(val) &&
+          String(val).toLowerCase() !== CLRTY1.network
+        ) {
+          // drop foreign chain stamp
+          u.searchParams.delete(key);
+          continue;
+        }
+        if (
+          (lk === "network" || lk === "settlement" || lk === "settlement_network") &&
+          val != null &&
+          String(val).toLowerCase() !== CLRTY1.network &&
+          String(val).toLowerCase() !== "clrty-1"
+        ) {
+          u.searchParams.delete(key);
+        }
+      }
+    }
+
+    u.searchParams.set("network", CLRTY1.network);
+    u.searchParams.set("chainId", String(CLRTY1.chainId));
+    u.searchParams.set("settlement", CLRTY1.network);
+
     for (const [k, v] of Object.entries(extra)) {
-      if (v != null && v !== "") u.searchParams.set(k, String(v));
+      if (v == null || v === "") continue;
+      const lk = k.toLowerCase();
+      if (lk === "chainid" || lk === "chain_id" || lk === "chain") {
+        assertClrty1Only(v, k);
+        u.searchParams.set("chainId", String(CLRTY1.chainId));
+        continue;
+      }
+      if (lk === "network" || lk === "settlement" || lk === "settlement_network") {
+        assertClrty1Only(v, k);
+        u.searchParams.set(k === "settlement_network" ? "settlement" : k, CLRTY1.network);
+        continue;
+      }
+      u.searchParams.set(k, String(v));
     }
     return u.toString();
-  } catch {
+  } catch (err) {
+    if (String(err?.message || err).startsWith("REFUSED:")) throw err;
     return href;
+  }
+}
+
+/** True if URL already settles exclusively on CLRTY-1 (or has no chain stamp). */
+export function urlIsClrty1Only(href) {
+  if (!href || href.startsWith("#") || href.startsWith("mailto:")) return true;
+  try {
+    const u = new URL(href, "https://clarity-tokens.pages.dev/");
+    const chain = u.searchParams.get("chainId") || u.searchParams.get("chain_id");
+    const network = u.searchParams.get("network") || u.searchParams.get("settlement");
+    if (chain != null && !isClrty1ChainId(chain)) return false;
+    if (network != null && String(network).toLowerCase() !== CLRTY1.network) return false;
+    return true;
+  } catch {
+    return true;
   }
 }
 
@@ -187,7 +276,7 @@ export function clrty1RouteList() {
   }));
 }
 
-/** Primary CTA destinations — all settle on CLRTY-1 */
+/** Primary CTA destinations — all settle on CLRTY-1 ONLY */
 export function buildClrty1CtaMap() {
   const R = CLRTY1_ROUTES;
   return {

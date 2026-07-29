@@ -11,17 +11,22 @@ export default function Clrty1RoutingPanel() {
     <section id="clrty1-routing" className="border-y border-clarity-border px-5 py-20 md:py-28">
       <div className="mx-auto max-w-6xl">
         <ScrollReveal>
-          <p className="section-kicker">CLRTY-1 routing mesh · settlement {CLRTY1.network} / {CLRTY1.chainId}</p>
+          <p className="section-kicker">CLRTY-1 ONLY · settlement {CLRTY1.network} / {CLRTY1.chainId} / {CLRTY1.chainIdHex}</p>
           <h2 className="display-title mt-3 text-3xl md:text-5xl">
             All routes settle on <span className="text-gradient">CLRTY-1</span>
           </h2>
           <p className="body-copy mt-4 max-w-3xl text-base">
             Every Token Extensions surface — RPC tip, API gateway, Explorer SCOPE, Browser HUD, wallet,
-            exchange, HELIX, MIRRA, and PAY — is wired into the live CLRTY-1 mesh (chain{" "}
-            {mesh.chainId ?? CLRTY1.chainId}
-            {mesh.live ? " · LIVE" : " · probing"}
-            {mesh.latencyMs != null ? ` · ${mesh.latencyMs}ms` : ""}).
+            exchange, HELIX, MIRRA, and PAY — wires into CLRTY-1 only (chain{" "}
+            {CLRTY1.chainId} / {CLRTY1.chainIdHex}). Never any other chain.
+            {mesh.live ? " · LIVE" : mesh.refusedForeignChain ? " · REFUSED foreign chain" : " · probing"}
+            {mesh.latencyMs != null ? ` · ${mesh.latencyMs}ms` : ""}.
           </p>
+          {mesh.refusedForeignChain && (
+            <p className="mt-3 font-mono text-sm text-red-400">
+              {mesh.error || "REFUSED: foreign chain detected — CLRTY-1 only"}
+            </p>
+          )}
         </ScrollReveal>
 
         <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

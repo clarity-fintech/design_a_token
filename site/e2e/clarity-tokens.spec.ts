@@ -53,11 +53,45 @@ test.describe('CLRTY Token Extensions landing', () => {
     );
     await expect(page.getByRole('link', { name: 'Clarity Home' }).first()).toHaveAttribute(
       'href',
-      /clarity-fintech\.com\/.*network=clrty-1/,
+      /clarity-fintech\.com\/.*network=clrty-1.*chainId=1202/,
     );
+    // NEVER any other chain on settlement-stamped connect links
+    const hrefs = await page.locator('#connect a[href*="chainId="]').evaluateAll((els) =>
+      els.map((a) => (a as HTMLAnchorElement).href),
+    );
+    for (const href of hrefs) {
+      expect(href, href).toMatch(/chainId=1202/);
+      expect(href, href).not.toMatch(/chainId=(?!1202)\d+/);
+      expect(href, href).toMatch(/network=clrty-1/);
+    }
     await expect(page.getByText(/192 programs|Pack backlinks|All backlinks connected/i).first()).toBeVisible();
     await expect(page.getByRole('button', { name: /Full pack/i })).toBeVisible();
     await expect(page.locator('#connectMesh')).toBeVisible();
+  });
+
+  test('CLRTY-1 only — live RPC 0x4b2 and no foreign chain stamps', async ({ page, request }) => {
+    await page.goto('/', { waitUntil: 'domcontentloaded' });
+    await page.locator('#clrty1-routing').scrollIntoViewIfNeeded();
+    await expect(page.getByText(/1202|0x4b2|clrty-1/i).first()).toBeVisible();
+    await expect(page.getByText(/Never any other chain/i).first()).toBeVisible();
+
+    const stamped = await page.locator('a[href*="chainId="]').evaluateAll((els) =>
+      els.map((a) => (a as HTMLAnchorElement).href),
+    );
+    expect(stamped.length).toBeGreaterThan(0);
+    for (const href of stamped) {
+      expect(href).toMatch(/chainId=1202/);
+      expect(href).not.toMatch(/chainId=(1|5|56|137|8453|42161)(?:&|$)/);
+      if (href.includes('network=')) expect(href).toMatch(/network=clrty-1/);
+    }
+
+    const rpc = await request.post('https://rpc.clarity-fintech.com', {
+      data: { jsonrpc: '2.0', id: 1, method: 'eth_chainId', params: [] },
+      headers: { 'content-type': 'application/json' },
+    });
+    expect(rpc.ok()).toBeTruthy();
+    const body = await rpc.json();
+    expect(body.result).toBe('0x4b2');
   });
 
   test('coding walkthroughs and database E mesh', async ({ page }) => {

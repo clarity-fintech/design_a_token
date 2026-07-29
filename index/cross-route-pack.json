@@ -1,16 +1,16 @@
 {
   "schema": "clrty.full_project_cross_route.ui/v1",
-  "updated_at": "2026-07-29T20:19:39Z",
+  "updated_at": "2026-07-29T20:24:48Z",
   "settlement_network": "clrty-1",
   "settlement_chain_id": 1202,
   "counts": {
-    "routes_total": 1084,
-    "routes_complete": 1084,
+    "routes_total": 1091,
+    "routes_complete": 1091,
     "routes_with_href": 121,
-    "sections": 610,
-    "databases": 20,
+    "sections": 611,
+    "databases": 22,
     "by_database": {
-      "ext-mis-code-index": 137,
+      "ext-mis-code-index": 138,
       "ext-database-index": 332,
       "ext-clarity-content-database": 29,
       "ext-clrty-sections": 115,
@@ -26,13 +26,15 @@
       "ext-cloudflare-worker-kv": 1,
       "ext-sql-schema": 10,
       "ext-seo-kit-second": 1,
-      "ext-live-surfaces": 17,
-      "ext-token-extensions": 109,
-      "ext-link-index": 19,
-      "ext-monetization-cross-route": 27
+      "ext-token-extensions": 110,
+      "ext-design-a-token": 1,
+      "ext-live-surfaces": 18,
+      "ext-link-index": 20,
+      "ext-full-project-cross-route": 1,
+      "ext-monetization-cross-route": 28
     },
     "by_domain": {
-      "external_database": 16,
+      "external_database": 22,
       "boot_protocol": 92,
       "wallet_ux": 30,
       "website_blockchain": 32,
@@ -46,7 +48,7 @@
       "link_registry": 4,
       "token_extensions": 9,
       "token_extensions_nanotask": 100,
-      "mis_code_band": 90,
+      "mis_code_band": 91,
       "link_suite": 8,
       "link_index": 11,
       "sql_table": 9,
@@ -2200,6 +2202,14 @@
           "path": "CLRTY_SUBSTRATE/boot/mis_code_index.json"
         },
         {
+          "id": "XR-MISBAND-clrty1_cross_route",
+          "section_id": "clrty1_cross_route",
+          "title": "mis_code_index:clrty1_cross_route",
+          "domain": "mis_code_band",
+          "href": null,
+          "path": "CLRTY_SUBSTRATE/boot/mis_code_index.json"
+        },
+        {
           "id": "XR-MISBAND-clrty1_full_matrix_100",
           "section_id": "clrty1_full_matrix_100",
           "title": "mis_code_index:clrty1_full_matrix_100",
@@ -2318,17 +2328,9 @@
           "domain": "mis_code_band",
           "href": null,
           "path": "CLRTY_SUBSTRATE/boot/mis_code_index.json"
-        },
-        {
-          "id": "XR-MISBAND-governance_sdk_mis",
-          "section_id": "governance_sdk_mis",
-          "title": "mis_code_index:governance_sdk_mis",
-          "domain": "mis_code_band",
-          "href": null,
-          "path": "CLRTY_SUBSTRATE/boot/mis_code_index.json"
         }
       ],
-      "count": 137
+      "count": 138
     },
     {
       "id": "ext-clrty-sections",
@@ -2980,6 +2982,14 @@
       "id": "ext-token-extensions",
       "routes": [
         {
+          "id": "XR-DB-ext-token-extensions",
+          "section_id": "root",
+          "title": "ext-token-extensions",
+          "domain": "external_database",
+          "href": null,
+          "path": "CLRTY_SUBSTRATE/boot/clarity_token_extensions.json"
+        },
+        {
           "id": "XR-TE-MOD-nanotasks",
           "section_id": "nanotasks",
           "title": "nanotasks",
@@ -3610,17 +3620,9 @@
           "domain": "token_extensions_nanotask",
           "href": "https://tokens.clarity-fintech.com/?network=clrty-1&chainId=1202&settlement=clrty-1&surface=db_token_extensions&section=CTE070#nanotasks",
           "path": "moniversive/nanotasks/clrty_token_extensions_integration_matrix.mis"
-        },
-        {
-          "id": "XR-TE-CTE071",
-          "section_id": "CTE071",
-          "title": "CTE071",
-          "domain": "token_extensions_nanotask",
-          "href": "https://tokens.clarity-fintech.com/?network=clrty-1&chainId=1202&settlement=clrty-1&surface=db_token_extensions&section=CTE071#nanotasks",
-          "path": "moniversive/nanotasks/clrty_token_extensions_integration_matrix.mis"
         }
       ],
-      "count": 109
+      "count": 110
     },
     {
       "id": "ext-website-pages",
@@ -5026,6 +5028,14 @@
       "id": "ext-monetization-cross-route",
       "routes": [
         {
+          "id": "XR-DB-ext-monetization-cross-route",
+          "section_id": "root",
+          "title": "ext-monetization-cross-route",
+          "domain": "external_database",
+          "href": null,
+          "path": "monetization-layers/surfaces/cross_route.json"
+        },
+        {
           "id": "XR-FEE-clarity_wallet",
           "section_id": "clarity_wallet",
           "title": "clarity_wallet",
@@ -5242,11 +5252,19 @@
           "path": "monetization-layers/surfaces/cross_route.json"
         }
       ],
-      "count": 27
+      "count": 28
     },
     {
       "id": "ext-link-index",
       "routes": [
+        {
+          "id": "XR-DB-ext-link-index",
+          "section_id": "root",
+          "title": "ext-link-index",
+          "domain": "external_database",
+          "href": null,
+          "path": "CLRTY_SUBSTRATE/boot/clrty_link_index.json"
+        },
         {
           "id": "XR-SUITE-clarity_deep_link",
           "section_id": "clarity_deep_link",
@@ -5400,11 +5418,19 @@
           "path": "CLRTY_SUBSTRATE/boot/clrty1_smart_contracts_section.json"
         }
       ],
-      "count": 19
+      "count": 20
     },
     {
       "id": "ext-live-surfaces",
       "routes": [
+        {
+          "id": "XR-DB-ext-live-surfaces",
+          "section_id": "root",
+          "title": "ext-live-surfaces",
+          "domain": "external_database",
+          "href": null,
+          "path": "CLRTY_SUBSTRATE/boot/clrty1_live_surfaces.json"
+        },
         {
           "id": "XR-LIVE-status-url",
           "section_id": "status",
@@ -5542,7 +5568,7 @@
           "path": "CLRTY_SUBSTRATE/boot/clrty1_live_surfaces.json"
         }
       ],
-      "count": 17
+      "count": 18
     },
     {
       "id": "ext-sql-schema",
@@ -5724,6 +5750,34 @@
           "domain": "external_database",
           "href": null,
           "path": "seo-kit-second/config/site-inventory.json"
+        }
+      ],
+      "count": 1
+    },
+    {
+      "id": "ext-design-a-token",
+      "routes": [
+        {
+          "id": "XR-DB-ext-design-a-token",
+          "section_id": "root",
+          "title": "ext-design-a-token",
+          "domain": "external_database",
+          "href": null,
+          "path": "external/clarity-fintech/design_a_token"
+        }
+      ],
+      "count": 1
+    },
+    {
+      "id": "ext-full-project-cross-route",
+      "routes": [
+        {
+          "id": "XR-DB-ext-full-project-cross-route",
+          "section_id": "root",
+          "title": "ext-full-project-cross-route",
+          "domain": "external_database",
+          "href": null,
+          "path": "CLRTY_SUBSTRATE/boot/clrty1_full_project_cross_route.json"
         }
       ],
       "count": 1

@@ -7,7 +7,7 @@ export default function LiveMeshStrip() {
   const items = [
     { k: "Network", v: CLRTY1.network },
     { k: "Chain", v: String(mesh.chainId ?? CLRTY1.chainId) },
-    { k: "RPC", v: mesh.live ? "LIVE" : "probing" },
+    { k: "RPC", v: mesh.refusedForeignChain ? "REFUSED" : mesh.live ? "LIVE" : "probing" },
     { k: "Block", v: mesh.blockNumber != null ? mesh.blockNumber.toLocaleString() : "—" },
     { k: "API", v: mesh.apiOk ? "ok" : "…" },
     { k: "Latency", v: mesh.latencyMs != null ? `${mesh.latencyMs}ms` : `≤${CLRTY1.latencyHardCapMs}ms` },

@@ -40,7 +40,11 @@ async function main() {
   }
 
   const live = numeric === EXPECTED && chain.ok && statusOk;
-  console.log(live ? "SUCCESS: CLRTY-1 live" : "FAIL: CLRTY-1 not fully live");
+  if (numeric !== EXPECTED) {
+    console.error(`REFUSED: foreign chain ${hex} (${numeric}) — CLRTY-1 ONLY (1202 / 0x4b2). NEVER any other chain.`);
+    process.exit(1);
+  }
+  console.log(live ? "SUCCESS: CLRTY-1 live (only chain)" : "FAIL: CLRTY-1 not fully live");
   process.exit(live ? 0 : 1);
 }
 

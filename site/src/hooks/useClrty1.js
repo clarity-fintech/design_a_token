@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CLRTY1, CLRTY1_ROUTES, routeToClrty1 } from "../data/clrty1Routing.js";
+import { CLRTY1, CLRTY1_ROUTES, isClrty1ChainId, routeToClrty1 } from "../data/clrty1Routing.js";
 
 async function rpcCall(url, method, id = 1) {
   const res = await fetch(url, {
@@ -19,16 +19,25 @@ async function headOk(url) {
   }
 }
 
+function parseChainId(raw) {
+  if (raw == null) return null;
+  if (typeof raw === "string" && raw.startsWith("0x")) return parseInt(raw, 16);
+  const n = Number(raw);
+  return Number.isFinite(n) ? n : null;
+}
+
 export function useClrty1() {
   const [status, setStatus] = useState({
     live: false,
     chainId: null,
+    chainIdHex: null,
     blockNumber: null,
     latencyMs: null,
     apiLambda: null,
     apiOk: false,
     explorerOk: null,
     walletRpcOk: null,
+    refusedForeignChain: false,
     routes: CLRTY1_ROUTES,
     error: null,
   });
@@ -53,46 +62,43 @@ export function useClrty1() {
         const ms = Math.round(performance.now() - t0);
         if (cancelled) return;
 
-        const raw = chainJson?.result ?? null;
-        const numeric =
-          typeof raw === "string" && raw.startsWith("0x")
-            ? parseInt(raw, 16)
-            : Number(raw) || CLRTY1.chainId;
+        const numeric = parseChainId(chainJson?.result);
+        const blockNumber = parseChainId(blockJson?.result);
+        const walletChain = parseChainId(walletRpc?.result);
 
-        const blockRaw = blockJson?.result ?? null;
-        const blockNumber =
-          typeof blockRaw === "string" && blockRaw.startsWith("0x")
-            ? parseInt(blockRaw, 16)
-            : Number(blockRaw) || null;
-
-        const walletChain = walletRpc?.result
-          ? typeof walletRpc.result === "string" && walletRpc.result.startsWith("0x")
-            ? parseInt(walletRpc.result, 16)
-            : Number(walletRpc.result)
-          : null;
+        const isClrty1 = isClrty1ChainId(numeric);
+        const walletOk = walletChain == null || isClrty1ChainId(walletChain);
+        const refused = numeric != null && !isClrty1;
 
         setStatus({
-          live: numeric === CLRTY1.chainId,
-          chainId: numeric,
-          blockNumber,
+          // LIVE only on CLRTY-1 — never report live for any other chain
+          live: isClrty1,
+          chainId: isClrty1 ? CLRTY1.chainId : numeric,
+          chainIdHex: isClrty1 ? CLRTY1.chainIdHex : chainJson?.result ?? null,
+          blockNumber: isClrty1 ? blockNumber : null,
           latencyMs: ms,
           apiLambda: apiJson?.lambda ?? null,
-          apiOk: Boolean(apiJson),
+          apiOk: Boolean(apiJson) && isClrty1,
           explorerOk: explorerStatus,
-          walletRpcOk: walletChain === CLRTY1.chainId,
+          walletRpcOk: walletOk && isClrty1,
+          refusedForeignChain: refused,
           routes: CLRTY1_ROUTES,
-          error: null,
+          error: refused
+            ? `REFUSED foreign chain ${chainJson?.result} — CLRTY-1 only (1202 / 0x4b2)`
+            : null,
         });
       } catch (err) {
         if (cancelled) return;
         setStatus((s) => ({
           ...s,
           live: false,
-          chainId: CLRTY1.chainId,
+          chainId: null,
+          chainIdHex: null,
           blockNumber: null,
           latencyMs: null,
           apiLambda: null,
           apiOk: false,
+          refusedForeignChain: false,
           error: String(err?.message || err),
         }));
       }
@@ -110,8 +116,8 @@ export function useClrty1() {
     ...status,
     latencyCapMs: CLRTY1.latencyHardCapMs,
     network: CLRTY1.network,
-    chainIdHex: CLRTY1.chainIdHex,
     settlement: CLRTY1.settlement,
+    onlyChain: true,
     route: routeToClrty1,
   };
 }
