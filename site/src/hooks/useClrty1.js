@@ -50,13 +50,13 @@ export function useClrty1() {
       const rpcUrl = CLRTY1_ROUTES.rpc.href;
       try {
         const [chainJson, blockJson, apiJson, explorerStatus, walletRpc] = await Promise.all([
-          rpcCall(rpcUrl, "eth_chainId", 1),
+          rpcCall(rpcUrl, "net_version", 1),
           rpcCall(rpcUrl, "eth_blockNumber", 2),
           fetch(CLRTY1_ROUTES.api.status)
             .then((r) => (r.ok ? r.json() : null))
             .catch(() => null),
           headOk(CLRTY1_ROUTES.explorer_api.href),
-          rpcCall(CLRTY1_ROUTES.wallet_rpc.href, "eth_chainId", 3).catch(() => null),
+          rpcCall(CLRTY1_ROUTES.wallet_rpc.href, "net_version", 3).catch(() => null),
         ]);
 
         const ms = Math.round(performance.now() - t0);

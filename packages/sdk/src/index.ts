@@ -251,19 +251,24 @@ export async function connectClrty1(opts?: {
   const api = opts?.api ?? CLRTY1.api;
   try {
     const [chain, tip, statusRes] = await Promise.all([
-      rpcCall(rpc, "eth_chainId"),
+      rpcCall(rpc, "net_version"),
       rpcCall(rpc, "eth_blockNumber", 2),
       fetch(`${api}/v1/status`)
         .then(async (r) => ({ ok: r.ok }))
         .catch(() => ({ ok: false })),
     ]);
-    const hex = chain.result ?? null;
-    const numeric = hex ? Number.parseInt(hex, 16) : NaN;
+    const raw = chain.result ?? null;
+    const numeric =
+      raw == null
+        ? NaN
+        : typeof raw === "string" && raw.startsWith("0x")
+          ? Number.parseInt(raw, 16)
+          : Number(raw);
     const blockNumber = tip.result ? Number.parseInt(tip.result, 16) : null;
     return {
       live: numeric === CLRTY1.chainId && statusRes.ok,
       chainId: Number.isFinite(numeric) ? numeric : CLRTY1.chainId,
-      chainIdHex: hex,
+      chainIdHex: typeof raw === "string" && raw.startsWith("0x") ? raw : null,
       blockNumber,
       latencyMs: chain.ms,
       apiOk: statusRes.ok,

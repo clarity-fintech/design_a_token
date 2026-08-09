@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Live-connect CLRTY-1: eth_chainId + API /v1/status + optional wallet RPC.
+ * Live-connect CLRTY-1: net_version + API /v1/status + optional wallet RPC.
  */
 const RPC = process.env.CLRTY_RPC_URL || "https://rpc.clarity-fintech.com";
 const API = process.env.CLRTY_API_URL || "https://api.clarity-fintech.com";
@@ -19,12 +19,17 @@ async function rpc(url, method, id = 1) {
 
 async function main() {
   console.log(`==> CLRTY-1 connect · expect chain ${EXPECTED}`);
-  const chain = await rpc(RPC, "eth_chainId");
+  const chain = await rpc(RPC, "net_version");
   const tip = await rpc(RPC, "eth_blockNumber", 2);
-  const hex = chain.json?.result;
-  const numeric = hex ? Number.parseInt(hex, 16) : NaN;
+  const raw = chain.json?.result;
+  const numeric =
+    raw == null
+      ? NaN
+      : typeof raw === "string" && raw.startsWith("0x")
+        ? Number.parseInt(raw, 16)
+        : Number(raw);
   console.log(`RPC ${RPC}`);
-  console.log(`  eth_chainId=${hex} (${numeric}) · ${chain.ms}ms · ${chain.ok ? "OK" : "FAIL"}`);
+  console.log(`  net_version=${raw} (${numeric}) · ${chain.ms}ms · ${chain.ok ? "OK" : "FAIL"}`);
   console.log(`  eth_blockNumber=${tip.json?.result} · ${tip.ms}ms`);
 
   let statusOk = false;

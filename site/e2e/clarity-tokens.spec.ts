@@ -86,12 +86,12 @@ test.describe('CLRTY Token Extensions landing', () => {
     }
 
     const rpc = await request.post('https://rpc.clarity-fintech.com', {
-      data: { jsonrpc: '2.0', id: 1, method: 'eth_chainId', params: [] },
+      data: { jsonrpc: '2.0', id: 1, method: 'net_version', params: [] },
       headers: { 'content-type': 'application/json' },
     });
     expect(rpc.ok()).toBeTruthy();
     const body = await rpc.json();
-    expect(body.result).toBe('0x4b2');
+    expect(body.result).toBe('1202');
   });
 
   test('coding walkthroughs and database E mesh', async ({ page }) => {
