@@ -15,7 +15,10 @@
     "language": ".mis",
     "ethereum": false,
     "foreign_l1_refused": true,
-    "note": "Settlement is CLRTY-1 Moniversive ONLY. Never Ethereum / never foreign L1."
+    "note": "ONLY CLRTY-1 custom Moniversive chain. ALL OTHER CHAINS ASIDE. Never Ethereum / never foreign L1 settlement.",
+    "custom_moniversive_chain": true,
+    "home_settlement_only": true,
+    "all_other_chains_aside": true
   },
   "usd_cents_per_clrty": 100,
   "private_seed_cap_tokens": 2000000,
@@ -25,7 +28,7 @@
   "strategic_min_usd_cents": 50000000,
   "reference_fx": {
     "eth_usd_cents": 300000,
-    "note": "FX reference only — NOT a settlement chain. Deposits may be valued vs ETH/USD without settling on Ethereum."
+    "note": "FX reference only \u2014 NOT a settlement chain. Deposits may be valued vs ETH/USD without settling on Ethereum."
   },
   "accepted_assets": [
     {
@@ -84,7 +87,7 @@
     {
       "id": "ethereum-mainnet",
       "chain_id": 1,
-      "reason": "Foreign L1 — CLRTY settlement is Moniversive CLRTY-1 only"
+      "reason": "Foreign L1 \u2014 CLRTY settlement is Moniversive CLRTY-1 only"
     },
     {
       "id": "ethereum-sepolia",

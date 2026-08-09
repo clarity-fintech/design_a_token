@@ -1,6 +1,6 @@
 {
   "schema": "clrty.token_extensions.hash_trace/v1",
-  "updated_at": "2026-07-29T21:01:41Z",
+  "updated_at": "2026-07-29T21:11:44Z",
   "chain_id": 1202,
   "settlement_network": "clrty-1",
   "kernel": "misc",
@@ -8,21 +8,21 @@
   "modules": [
     {
       "path": "mis/MisClrtyTokenExtensions.mis",
-      "sha256": "205c3d8227001222c033bd8e4fc8508bbf32f081eddd1c92dccde4078157ef51",
-      "bytes": 4144,
-      "@": "@CLRTY.TokenExtensions#205c3d8227001222"
+      "sha256": "c14db151dc9633f1a548da3e4a154ab6a2578d4121b57b1b79f07dde3f2b7725",
+      "bytes": 4414,
+      "@": "@CLRTY.TokenExtensions#c14db151dc9633f1"
     },
     {
       "path": "mis/MisClrtyTokenExtensionsHarness.mis",
-      "sha256": "23804233473877af49a4f99d5a02ef636f28027870f104b031292691e5643a67",
-      "bytes": 3471,
-      "@": "@CLRTY.TokenExtensions#23804233473877af"
+      "sha256": "8f292b0b836ca6f2b2ac143021ebc5638015f551656ae7eacf09d844d4ca7d61",
+      "bytes": 3741,
+      "@": "@CLRTY.TokenExtensions#8f292b0b836ca6f2"
     },
     {
       "path": "mis/MisClrtyTokenExtensionsInvariants.mis",
-      "sha256": "15d73df72e732173112df293d64840a578ee90d90bd54354294ee07331e0ccc4",
-      "bytes": 19970,
-      "@": "@CLRTY.TokenExtensions#15d73df72e732173"
+      "sha256": "648cfc952288ecc58bea9480d2218dffab678f0509535b22cc86d2d897045215",
+      "bytes": 20240,
+      "@": "@CLRTY.TokenExtensions#648cfc952288ecc5"
     },
     {
       "path": "mis/clrty_token_extensions_integration_matrix.mis",

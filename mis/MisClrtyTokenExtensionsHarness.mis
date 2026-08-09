@@ -15,6 +15,10 @@ module MisClrtyTokenExtensionsHarness {
   invariant no_ethereum_settlement: ethereum_mainnet_settlement == false;
   invariant no_ethereum_chain_id_one: ethereum_chain_id_1_active == false;
   invariant moniversive_home_chain: home_blockchain == moniversive;
+  invariant custom_moniversive_chain_only: custom_moniversive_chain == true;
+  invariant foreign_chains_all_aside: all_other_chains_aside == true;
+  invariant no_solidity_authoring: solidity_authoring == false;
+  invariant no_solc_kernel: solc_compiler_active == false;
   invariant harness_spans_100_tasks: harness_task_count == 100;
   invariant harness_spans_10_tiers: harness_tier_count == 10;
   invariant public_route_clarity_tokens: clarity_tokens_public_route == true;

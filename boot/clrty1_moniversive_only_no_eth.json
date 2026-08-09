@@ -1,10 +1,10 @@
 {
   "schema": "clrty.moniversive_only_no_eth/v1",
-  "updated_at": "2026-07-29T21:00:00Z",
+  "updated_at": "2026-07-29T21:10:00Z",
   "creator": "Chandler William Ferguson",
   "status": "active",
   "active": true,
-  "policy": "CLRTY-1_MONIVERSIVE_ONLY_NO_ETH_SETTLEMENT",
+  "policy": "CLRTY-1_CUSTOM_MONIVERSIVE_CHAIN_ONLY_ALL_OTHERS_ASIDE",
   "blockchain": {
     "family": "moniversive",
     "dialect": "mis-ml",
@@ -17,23 +17,76 @@
     "api": "https://api.clarity-fintech.com",
     "ethereum": false,
     "solana": false,
-    "foreign_l1_settlement": false
+    "solidity": false,
+    "solidity_authoring": false,
+    "foreign_l1_settlement": false,
+    "custom_moniversive_chain": true,
+    "home_settlement_only": true,
+    "all_other_chains_aside": true
   },
-  "json_rpc_note": "CLRTY-1 exposes EVM-compatible JSON-RPC method names (eth_chainId, eth_blockNumber) for tooling compatibility. That does NOT mean settlement on Ethereum. eth_chainId MUST return 0x4b2 (1202).",
+  "contract_language": {
+    "clrty1_ssot": [".mis", ".clrty"],
+    "home_forms": [".mis", ".clrty"],
+    "refused_home_form": ".sol",
+    "compiler": "bin/misc",
+    "refused_on_clrty1": [
+      "solidity",
+      ".sol",
+      "solc",
+      "hardhat",
+      "foundry",
+      "vyper"
+    ],
+    "all_other_chains_aside": {
+      "solidity_archive": "var/outer_chains_solidity_archive/",
+      "quarantine_manifest": "var/outer_chains_solidity_archive/QUARANTINE_MANIFEST.json",
+      "quarantined_sol_count": 86,
+      "quarantine_sources": [
+        "var/mis_github_repos",
+        "external/clarity-fintech/main"
+      ],
+      "note": "ALL need to be .clrty / .mis — never .sol on CLRTY-1. 86 .sol files quarantined ASIDE. Solidity / Hardhat / Foundry and every non-CLRTY-1 chain are ASIDE — quarantine/reference only. They are NOT part of CLRTY-1 home SSOT."
+    }
+  },
+  "json_rpc_note": "CLRTY-1 exposes EVM-compatible JSON-RPC method names (eth_chainId, eth_blockNumber) for tooling compatibility. That does NOT mean settlement on Ethereum or authoring in Solidity. eth_chainId MUST return 0x4b2 (1202).",
   "taxonomy": {
     "family": "mis_chain",
     "branch": "mis_evm",
-    "note": "mis_evm is the Moniversive EVM-compatible execution branch on CLRTY-1 — not Ethereum L1."
+    "note": "mis_evm is the Moniversive EVM-compatible execution branch ON CLRTY-1 only \u2014 not Ethereum L1 and not any other chain."
   },
   "refused_settlement_chains": [
-    { "id": "ethereum-mainnet", "chain_id": 1 },
-    { "id": "ethereum-sepolia", "chain_id": 11155111 },
-    { "id": "ethereum-goerli", "chain_id": 5 },
-    { "id": "polygon", "chain_id": 137 },
-    { "id": "base", "chain_id": 8453 },
-    { "id": "arbitrum", "chain_id": 42161 },
-    { "id": "optimism", "chain_id": 10 },
-    { "id": "bnb", "chain_id": 56 }
+    {
+      "id": "ethereum-mainnet",
+      "chain_id": 1
+    },
+    {
+      "id": "ethereum-sepolia",
+      "chain_id": 11155111
+    },
+    {
+      "id": "ethereum-goerli",
+      "chain_id": 5
+    },
+    {
+      "id": "polygon",
+      "chain_id": 137
+    },
+    {
+      "id": "base",
+      "chain_id": 8453
+    },
+    {
+      "id": "arbitrum",
+      "chain_id": 42161
+    },
+    {
+      "id": "optimism",
+      "chain_id": 10
+    },
+    {
+      "id": "bnb",
+      "chain_id": 56
+    }
   ],
   "required_ssot": [
     "CLRTY_SUBSTRATE/boot/l1_network_manifest.json",
@@ -51,5 +104,57 @@
     "settlement_network": "clrty-1",
     "settlement_chain_id": 1202,
     "letter_hash": "sha256-rolling-typed-letter/v1"
+  },
+  "mandate": "ONLY the actual CLRTY-1 chain itself \u2014 custom Moniversive blockchain (clrty-1 / 1202 / 0x4b2 / .mis + .clrty / misc). ALL need to be .clrty / .mis \u2014 never .sol. ALL OTHER CHAINS ASIDE. Never settle, author, or claim home on Ethereum or any foreign L1/L2.",
+  "home_chain": {
+    "id": "clrty-1",
+    "name": "CLRTY-1",
+    "type": "custom_moniversive_chain",
+    "chain_id": 1202,
+    "chain_id_hex": "0x4b2",
+    "language": ".mis",
+    "forms": [".mis", ".clrty"],
+    "refused_form": ".sol",
+    "kernel": "misc"
+  },
+  "all_other_chains": {
+    "status": "aside",
+    "settlement": false,
+    "authoring": false,
+    "product_home": false,
+    "refused_as_settlement": [
+      {
+        "id": "ethereum-mainnet",
+        "chain_id": 1
+      },
+      {
+        "id": "ethereum-sepolia",
+        "chain_id": 11155111
+      },
+      {
+        "id": "ethereum-goerli",
+        "chain_id": 5
+      },
+      {
+        "id": "polygon",
+        "chain_id": 137
+      },
+      {
+        "id": "base",
+        "chain_id": 8453
+      },
+      {
+        "id": "arbitrum",
+        "chain_id": 42161
+      },
+      {
+        "id": "optimism",
+        "chain_id": 10
+      },
+      {
+        "id": "bnb",
+        "chain_id": 56
+      }
+    ]
   }
 }

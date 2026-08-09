@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "task": "l1_network",
+  "chain_id": 1202,
+  "chain_slug": "clrty-1",
+  "decimals": 9,
+  "symbol": "uclrty",
+  "name": "CLRTY-1",
+  "consensus": "poc_l1",
+  "rpc": {
+    "primary": "https://rpc.clarity-fintech.com",
+    "local": "http://127.0.0.1:8545/rpc",
+    "methods_manifest": "CLRTY_SUBSTRATE/boot/clrty_rpc_methods_manifest.json"
+  },
+  "wallet_network": "CLRTY_SUBSTRATE/boot/clrty1_wallet_network.json",
+  "rest": {
+    "primary": "https://api.clarity-fintech.com",
+    "internal_tunnel": "https://api-internal.clarity-fintech.com",
+    "local": "http://127.0.0.1:8545",
+    "health_path": "/v1/health",
+    "origin_health_path": "/v1/status",
+    "health_probe_url": "https://api.clarity-fintech.com/v1/health"
+  },
+  "block_time_target_ms": 400,
+  "slot_rpc": "getSlot",
+  "genesis": "CLRTY_SUBSTRATE/boot/genesis_entropy.json",
+  "security": {
+    "mda": "CLRTY_SUBSTRATE/security/mda/",
+    "fma": "CLRTY_SUBSTRATE/security/fma/",
+    "msd": "CLRTY_SUBSTRATE/security/msd/"
+  },
+  "topology": {
+    "validators": {
+      "role": "consensus",
+      "expose_rpc": false
+    },
+    "sentries": {
+      "role": "perimeter",
+      "expose_rpc": false,
+      "count_planned": 3
+    },
+    "rpc_gateway": {
+      "role": "edge",
+      "host": "rpc.clarity-fintech.com",
+      "worker": "rpc-gateway"
+    },
+    "cex_ingress": {
+      "role": "archival",
+      "host": "cex-ingress.clarity-fintech.com"
+    }
+  },
+  "status": "mainnet_candidate",
+  "deep_root": {
+    "language": "moniversive",
+    "dialect": "mis-ml",
+    "extension": ".mis",
+    "language_root": "CLRTY_SUBSTRATE/boot/moniversive_language_root.json",
+    "settlement_network": "clrty-1",
+    "settlement_chain_id": 1202,
+    "letter_hash": "sha256-rolling-typed-letter/v1",
+    "legacy_extensions": [
+      ".clrty",
+      ".crty"
+    ]
+  },
+  "tick_architecture": {
+    "manifest": "CLRTY_SUBSTRATE/boot/clrty1_tick_architecture.json",
+    "module": "languages/mis-ml/surfaces/TickArchitecture.clrty",
+    "target_slot_duration_ms": 640,
+    "ticks_per_slot": 128,
+    "tick_duration_ms": 5,
+    "live_slot_ms": 400,
+    "note": "Live slot remains block_time_target_ms until runtime cutover; target is 128\u00d75ms=640ms",
+    "deep_root": {
+      "language": "moniversive",
+      "dialect": "mis-ml",
+      "extension": ".clrty",
+      "language_root": "CLRTY_SUBSTRATE/boot/moniversive_language_root.json",
+      "settlement_network": "clrty-1",
+      "settlement_chain_id": 1202,
+      "letter_hash": "sha256-rolling-typed-letter/v1"
+    }
+  },
+  "staking": {
+    "module": "languages/mis-ml/surfaces/StakingRpcNode.clrty",
+    "vault": "CLRTY_SUBSTRATE/bridge_perimeter/fma/contracts/src/FmaStakingVault.clrty",
+    "deep_root": {
+      "language": "moniversive",
+      "dialect": "mis-ml",
+      "extension": ".clrty",
+      "language_root": "CLRTY_SUBSTRATE/boot/moniversive_language_root.json",
+      "settlement_network": "clrty-1",
+      "settlement_chain_id": 1202,
+      "letter_hash": "sha256-rolling-typed-letter/v1"
+    }
+  },
+  "static_ml": {
+    "catalog": "CLRTY_SUBSTRATE/boot/clrty1_static_ml_invariants.json",
+    "module": "languages/mis-ml/surfaces/StaticMlInvariants.clrty",
+    "count": 300,
+    "gradient_band": {
+      "range": "201-300",
+      "catalog": "CLRTY_SUBSTRATE/boot/clrty1_gradient_invariants_201_300.json",
+      "module": "languages/mis-ml/surfaces/GradientBackpropInvariants.clrty",
+      "deep_root": {
+        "language": "moniversive",
+        "dialect": "mis-ml",
+        "extension": ".clrty",
+        "language_root": "CLRTY_SUBSTRATE/boot/moniversive_language_root.json",
+        "settlement_network": "clrty-1",
+        "settlement_chain_id": 1202,
+        "letter_hash": "sha256-rolling-typed-letter/v1"
+      }
+    },
+    "deep_root": {
+      "language": "moniversive",
+      "dialect": "mis-ml",
+      "extension": ".clrty",
+      "language_root": "CLRTY_SUBSTRATE/boot/moniversive_language_root.json",
+      "settlement_network": "clrty-1",
+      "settlement_chain_id": 1202,
+      "letter_hash": "sha256-rolling-typed-letter/v1"
+    }
+  },
+  "epoch": {
+    "architecture": "CLRTY_SUBSTRATE/boot/clrty1_epoch_architecture.json",
+    "module": "languages/mis-ml/surfaces/EpochArchitecture.clrty",
+    "slots_per_epoch": 432000,
+    "live_slot_ms": 400,
+    "target_slot_ms": 640,
+    "live_epoch_duration_ms": 172800000,
+    "target_epoch_duration_ms": 276480000,
+    "target_ticks_per_epoch": 55296000,
+    "deep_root": {
+      "language": "moniversive",
+      "dialect": "mis-ml",
+      "extension": ".clrty",
+      "language_root": "CLRTY_SUBSTRATE/boot/moniversive_language_root.json",
+      "settlement_network": "clrty-1",
+      "settlement_chain_id": 1202,
+      "letter_hash": "sha256-rolling-typed-letter/v1"
+    }
+  },
+  "dual_loop": {
+    "architecture": "CLRTY_SUBSTRATE/boot/clrty1_dual_loop_architecture.json",
+    "module": "languages/mis-ml/surfaces/DualLoopArchitecture.clrty",
+    "token_band": "401-500",
+    "rpc_band": "501-600",
+    "deep_root": {
+      "language": "moniversive",
+      "dialect": "mis-ml",
+      "extension": ".clrty",
+      "language_root": "CLRTY_SUBSTRATE/boot/moniversive_language_root.json",
+      "settlement_network": "clrty-1",
+      "settlement_chain_id": 1202,
+      "letter_hash": "sha256-rolling-typed-letter/v1"
+    }
+  },
+  "live_surfaces": "CLRTY_SUBSTRATE/boot/clrty1_live_surfaces.json",
+  "updated_at": "2026-07-26T01:15:00Z",
+  "master_band": {
+    "range": "601-700",
+    "catalog": "CLRTY_SUBSTRATE/boot/clrty1_master_invariants_601_700.json",
+    "module": "languages/mis-ml/surfaces/MoniversiveMasterTerminator.clrty",
+    "static_ml_count": 775,
+    "deep_root": {
+      "language": "moniversive",
+      "dialect": "mis-ml",
+      "extension": ".clrty",
+      "language_root": "CLRTY_SUBSTRATE/boot/moniversive_language_root.json",
+      "settlement_network": "clrty-1",
+      "settlement_chain_id": 1202,
+      "letter_hash": "sha256-rolling-typed-letter/v1"
+    }
+  },
+  "mis_code_index": "CLRTY_SUBSTRATE/boot/mis_code_index.json",
+  "blockchain": {
+    "family": "moniversive",
+    "type": "custom_moniversive_chain",
+    "network": "clrty-1",
+    "chain_id": 1202,
+    "chain_id_hex": "0x4b2",
+    "language": ".mis",
+    "kernel": "misc",
+    "home_settlement_only": true,
+    "all_other_chains_aside": true,
+    "ethereum": false,
+    "note": "ONLY the actual CLRTY-1 Moniversive chain \u2014 all other chains aside."
+  }
+}

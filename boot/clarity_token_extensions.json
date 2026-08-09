@@ -4,8 +4,10 @@
   "title": "CLRTY Token Extensions",
   "tagline": "Create programmable assets on CLRTY-1",
   "language": ".mis",
-  "public_url": "https://www.clarity-fintech.com/clarity-tokens/",
-  "canonical": "https://www.clarity-fintech.com/clarity-tokens/",
+  "home_forms": [".mis", ".clrty"],
+  "refused_home_form": ".sol",
+  "public_url": "https://tokens.clarity-fintech.com/",
+  "canonical": "https://tokens.clarity-fintech.com/",
   "chain": {
     "id": "clrty-1",
     "numeric": 1202,
@@ -23,12 +25,27 @@
     "chain_id_hex": "0x4b2",
     "kernel": "misc",
     "language": ".mis",
+    "home_forms": [".mis", ".clrty"],
+    "refused_home_form": ".sol",
     "taxonomy": "mis_chain/mis_evm",
     "ethereum": false,
+    "solidity": false,
+    "solidity_authoring": false,
     "foreign_l1_settlement": false,
-    "policy": "CLRTY-1_MONIVERSIVE_ONLY_NO_ETH_SETTLEMENT",
+    "policy": "CLRTY-1_CUSTOM_MONIVERSIVE_CHAIN_ONLY_ALL_OTHERS_ASIDE",
     "policy_manifest": "CLRTY_SUBSTRATE/boot/clrty1_moniversive_only_no_eth.json",
-    "json_rpc_note": "eth_chainId/eth_blockNumber are CLRTY-1 JSON-RPC method names — not Ethereum L1 settlement."
+    "json_rpc_note": "eth_chainId/eth_blockNumber are CLRTY-1 JSON-RPC method names on the custom Moniversive chain \u2014 not Ethereum and not any other chain.",
+    "custom_moniversive_chain": true,
+    "home_settlement_only": true,
+    "all_other_chains_aside": true,
+    "solidity_quarantine": {
+      "archive": "var/outer_chains_solidity_archive/",
+      "count": 86,
+      "sources": [
+        "var/mis_github_repos",
+        "external/clarity-fintech/main"
+      ]
+    }
   },
   "token": {
     "symbol": "uclrty",

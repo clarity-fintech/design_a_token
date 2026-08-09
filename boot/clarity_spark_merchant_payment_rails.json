@@ -1,0 +1,478 @@
+{
+  "schema": "clrty.spark_merchant_payment_rails/v1",
+  "updated_at": "2026-07-29T21:10:00Z",
+  "creator": "Chandler William Ferguson",
+  "settlement_authority": {
+    "network": "clrty-1",
+    "chain_id": 1202,
+    "chain_id_hex": "0x4b2",
+    "denom": "uclrty",
+    "blockchain": "moniversive",
+    "ethereum": false,
+    "policy": "CLRTY-1_CUSTOM_MONIVERSIVE_CHAIN_ONLY_ALL_OTHERS_ASIDE",
+    "custom_moniversive_chain": true,
+    "home_settlement_only": true,
+    "all_other_chains_aside": true
+  },
+  "source_ecosystem": "Clarity Wallet / CLRTY-1 custom Moniversive ONLY",
+  "merchant_dashboard": {
+    "spa_route": "/rails",
+    "component": "cloudflare/spark-pay/merchant/src/pages/PaymentRailsPage.jsx",
+    "data": "cloudflare/spark-pay/merchant/src/data/paymentRailsMap.js",
+    "probe_copy": "cloudflare/spark-pay/merchant/src/data/probeRefundCopy.js"
+  },
+  "probe_auto_refund": {
+    "schema": "clrty.spark_rails_probe_auto_refund/v1",
+    "boot": "CLRTY_SUBSTRATE/boot/clarity_spark_probe_auto_refund.json",
+    "mis": "moniversive/payments/spark_mis/CLRTY_1_SPARK_PROBE_INTEGRATION.mis",
+    "endpoint": "POST /v1/spark/rails/probe",
+    "alias": "POST /v1/rails/probe",
+    "amount": 0.01,
+    "auto_refund": true,
+    "descriptor": "CLRTY VERIFY $0.01 (REFUNDED)",
+    "activation": "probe_success && (refund_success || auth_hold_only) && net == 0"
+  },
+  "parent_manifests": {
+    "merchant_ecosystem": "CLRTY_SUBSTRATE/boot/clarity_spark_merchant_ecosystem.json",
+    "payment_rails": "CLRTY_SUBSTRATE/boot/payment_rails_manifest.json",
+    "spark_live_api": "CLRTY_SUBSTRATE/boot/clarity_spark_live_api_streaming.json",
+    "wallet_backend": "CLRTY_SUBSTRATE/boot/wallet_backend_routing_manifest.json",
+    "wallet_network": "CLRTY_SUBSTRATE/boot/clrty1_wallet_network.json",
+    "settlement_config": "CLRTY_SUBSTRATE/boot/settlement_config.json",
+    "moniversive_policy": "CLRTY_SUBSTRATE/boot/clrty1_moniversive_only_no_eth.json"
+  },
+  "institutional_fiat_banking": {
+    "instant_domestic": [
+      {
+        "rail": "fednow",
+        "region": "US",
+        "settlement": "24x7_instant_gross",
+        "spark_route": "POST /v1/spark/pay/fednow"
+      },
+      {
+        "rail": "ach_same_day",
+        "region": "US",
+        "settlement": "same_day_batch",
+        "spark_route": "POST /v1/spark/pay/ach"
+      },
+      {
+        "rail": "ach_standard",
+        "region": "US",
+        "settlement": "standard_batch",
+        "spark_route": "POST /v1/spark/pay/ach"
+      },
+      {
+        "rail": "sepa",
+        "region": "EU",
+        "settlement": "sepa_credit",
+        "spark_route": "POST /v1/spark/pay/sepa"
+      },
+      {
+        "rail": "sepa_instant",
+        "region": "EU",
+        "settlement": "sepa_instant",
+        "spark_route": "POST /v1/spark/pay/sepa",
+        "compliance": [
+          "bafin",
+          "french_regulatory_frameworks"
+        ]
+      }
+    ],
+    "card_and_wallets": [
+      {
+        "rail": "card_networks",
+        "networks": [
+          "visa",
+          "mastercard",
+          "amex",
+          "discover"
+        ],
+        "pci": "dss_level1_vault",
+        "spark_route": "POST /v1/spark/pay/card"
+      },
+      {
+        "rail": "apple_pay",
+        "spark_route": "POST /v1/spark/pay/apple-pay"
+      },
+      {
+        "rail": "google_pay",
+        "spark_route": "POST /v1/spark/pay/google-pay"
+      }
+    ],
+    "onramp_offramp": {
+      "usdc_open_settlement": "fiat_intake_isolated_from_chain_blocking",
+      "instant_cash_out": [
+        "bank_account",
+        "card_payout"
+      ],
+      "spark_charge": "POST /v1/spark/charge",
+      "spark_checkout": "POST /v1/spark/modal/checkout"
+    }
+  },
+  "dashboard_capability_matrix": [
+    {
+      "category": "CLRTY-1 & gas relay",
+      "rails": [
+        "clrty1_native",
+        "sponsored_gas_relay"
+      ],
+      "capabilities": [
+        "Zero-fee internal transfers",
+        "Instant payment link settlement",
+        "Automated sub-cent micro-payments"
+      ]
+    },
+    {
+      "category": "USDC / EURC / USDT",
+      "rails": [
+        "stablecoin_clob",
+        "eurc_cross_border"
+      ],
+      "capabilities": [
+        "Stable merchant balance holding",
+        "Cross-border remittance",
+        "Zero-volatility invoicing"
+      ]
+    },
+    {
+      "category": "FedNow / SEPA Instant",
+      "rails": [
+        "fednow",
+        "sepa_instant"
+      ],
+      "capabilities": [
+        "Real-time merchant payouts",
+        "Instant dispute/refund processing",
+        "Immediate liquidity clearance"
+      ]
+    },
+    {
+      "category": "Auto-node staking",
+      "rails": [
+        "auto_node_mesh",
+        "mis-stake-pool",
+        "liquid-staking-core"
+      ],
+      "capabilities": [
+        "Idle merchant cash sweep to validator pools",
+        "Auto-compounding yield on unspent balances"
+      ]
+    },
+    {
+      "category": "Card & Apple/Google Pay",
+      "rails": [
+        "card_networks",
+        "apple_pay",
+        "google_pay"
+      ],
+      "capabilities": [
+        "Web2 checkout payment links",
+        "Subscription billing loops via Cloudflare Workers"
+      ]
+    },
+    {
+      "category": "All other chains (ASIDE \u2014 non-settlement)",
+      "rails": [
+        "all_other_chains_aside"
+      ],
+      "capabilities": [
+        "Bridge quotes only \u2014 never home settlement",
+        "Final settlement always CLRTY-1 / 1202",
+        "Ethereum and other L1s refused as settlement chains"
+      ]
+    }
+  ],
+  "mis": {
+    "module": "moniversive/framework/merchant/MisMerchantPaymentRailsMap.mis",
+    "spark_onramp": "moniversive/payments/MisSparkMultiCoinOnramp.mis"
+  },
+  "active": true,
+  "unlisted": true,
+  "clrty1_home_only_rails": {
+    "mandate": "ONLY CLRTY-1 custom Moniversive chain \u2014 all other chains aside.",
+    "clrty1_native_rail": {
+      "chain_id": 1202,
+      "network": "clrty-1",
+      "settlement": true,
+      "home_chain": true,
+      "assets": [
+        "CLRTY",
+        "uclrty"
+      ],
+      "features": [
+        "instant_native_settlement",
+        "sponsored_gas_relay_zero_fee_internal",
+        "auto_node_mesh",
+        "liquidity_staking_yield_sweep"
+      ],
+      "mis_staking_modules": [
+        "mis-stake-pool",
+        "liquid-staking-core",
+        "st-clrty-program"
+      ],
+      "apy_marketing_note": "Auto-node yield referenced in product copy; native stake gated by ClrtyPreLaunchFreeze until TGE unlock.",
+      "pre_launch_policy": "moniversive/framework/wallet/ClrtyPreLaunchFreeze.mis"
+    },
+    "stablecoin_open_settlement": {
+      "assets": [
+        "USDC",
+        "USDT",
+        "EURC"
+      ],
+      "final_settlement_network": "clrty-1",
+      "final_settlement_chain_id": 1202,
+      "routing": "clob_mini_exchange_zero_slippage",
+      "liquidity": "CLRTY/USD CLOB + perps hedge rail"
+    },
+    "derivatives_perps": {
+      "clob": "CLRTY/USD",
+      "perps_orderbook": true,
+      "merchant_use": "instant_hedging_volatility_protection",
+      "settlement_network": "clrty-1",
+      "settlement_chain_id": 1202
+    },
+    "all_other_chains_aside": {
+      "policy": "ALL OTHER CHAINS ASIDE. Inbound media / bridge quotes ONLY if ever used. NEVER home settlement. ONLY CLRTY-1 custom Moniversive (1202) settles.",
+      "settlement": false,
+      "ethereum_home_chain": false,
+      "evm_chains_refused_as_settlement": [
+        {
+          "name": "Ethereum",
+          "chain_id": 1,
+          "role": "refused_settlement",
+          "assets": [
+            "ETH",
+            "ERC-20"
+          ]
+        },
+        {
+          "name": "Arbitrum One",
+          "chain_id": 42161,
+          "role": "refused_settlement",
+          "assets": [
+            "ETH",
+            "ERC-20"
+          ]
+        },
+        {
+          "name": "Optimism",
+          "chain_id": 10,
+          "role": "refused_settlement",
+          "assets": [
+            "ETH",
+            "ERC-20"
+          ]
+        },
+        {
+          "name": "Base",
+          "chain_id": 8453,
+          "role": "refused_settlement",
+          "assets": [
+            "ETH",
+            "cbBTC",
+            "ERC-20"
+          ]
+        },
+        {
+          "name": "Avalanche C-Chain",
+          "chain_id": 43114,
+          "role": "refused_settlement",
+          "assets": [
+            "AVAX",
+            "ERC-20"
+          ]
+        },
+        {
+          "name": "BNB Chain",
+          "chain_id": 56,
+          "role": "refused_settlement",
+          "assets": [
+            "BNB",
+            "BEP-20"
+          ]
+        }
+      ],
+      "svm_and_other_refused_as_settlement": [
+        {
+          "name": "Solana",
+          "family": "svm",
+          "role": "refused_settlement",
+          "assets": [
+            "SOL",
+            "SPL"
+          ]
+        },
+        {
+          "name": "Bitcoin",
+          "family": "utxo",
+          "role": "refused_settlement",
+          "assets": [
+            "BTC"
+          ]
+        },
+        {
+          "name": "Sui",
+          "family": "move",
+          "role": "refused_settlement",
+          "assets": [
+            "SUI"
+          ]
+        },
+        {
+          "name": "Bittensor",
+          "family": "tao",
+          "role": "refused_settlement",
+          "assets": [
+            "TAO"
+          ]
+        }
+      ],
+      "status": "aside",
+      "product_home": false
+    }
+  },
+  "native_onchain_and_multichain": {
+    "_deprecated": "renamed conceptually \u2014 use clrty1_home_only_rails; multichain is ASIDE",
+    "clrty1_native_rail": {
+      "chain_id": 1202,
+      "network": "clrty-1",
+      "settlement": true,
+      "home_chain": true,
+      "assets": [
+        "CLRTY",
+        "uclrty"
+      ],
+      "features": [
+        "instant_native_settlement",
+        "sponsored_gas_relay_zero_fee_internal",
+        "auto_node_mesh",
+        "liquidity_staking_yield_sweep"
+      ],
+      "mis_staking_modules": [
+        "mis-stake-pool",
+        "liquid-staking-core",
+        "st-clrty-program"
+      ],
+      "apy_marketing_note": "Auto-node yield referenced in product copy; native stake gated by ClrtyPreLaunchFreeze until TGE unlock.",
+      "pre_launch_policy": "moniversive/framework/wallet/ClrtyPreLaunchFreeze.mis"
+    },
+    "stablecoin_open_settlement": {
+      "assets": [
+        "USDC",
+        "USDT",
+        "EURC"
+      ],
+      "final_settlement_network": "clrty-1",
+      "final_settlement_chain_id": 1202,
+      "routing": "clob_mini_exchange_zero_slippage",
+      "liquidity": "CLRTY/USD CLOB + perps hedge rail"
+    },
+    "derivatives_perps": {
+      "clob": "CLRTY/USD",
+      "perps_orderbook": true,
+      "merchant_use": "instant_hedging_volatility_protection",
+      "settlement_network": "clrty-1",
+      "settlement_chain_id": 1202
+    },
+    "foreign_non_settlement_ingress": {
+      "policy": "ALL OTHER CHAINS ASIDE. Inbound media / bridge quotes ONLY if ever used. NEVER home settlement. ONLY CLRTY-1 custom Moniversive (1202) settles.",
+      "settlement": false,
+      "ethereum_home_chain": false,
+      "evm_chains_refused_as_settlement": [
+        {
+          "name": "Ethereum",
+          "chain_id": 1,
+          "role": "refused_settlement",
+          "assets": [
+            "ETH",
+            "ERC-20"
+          ]
+        },
+        {
+          "name": "Arbitrum One",
+          "chain_id": 42161,
+          "role": "refused_settlement",
+          "assets": [
+            "ETH",
+            "ERC-20"
+          ]
+        },
+        {
+          "name": "Optimism",
+          "chain_id": 10,
+          "role": "refused_settlement",
+          "assets": [
+            "ETH",
+            "ERC-20"
+          ]
+        },
+        {
+          "name": "Base",
+          "chain_id": 8453,
+          "role": "refused_settlement",
+          "assets": [
+            "ETH",
+            "cbBTC",
+            "ERC-20"
+          ]
+        },
+        {
+          "name": "Avalanche C-Chain",
+          "chain_id": 43114,
+          "role": "refused_settlement",
+          "assets": [
+            "AVAX",
+            "ERC-20"
+          ]
+        },
+        {
+          "name": "BNB Chain",
+          "chain_id": 56,
+          "role": "refused_settlement",
+          "assets": [
+            "BNB",
+            "BEP-20"
+          ]
+        }
+      ],
+      "svm_and_other_refused_as_settlement": [
+        {
+          "name": "Solana",
+          "family": "svm",
+          "role": "refused_settlement",
+          "assets": [
+            "SOL",
+            "SPL"
+          ]
+        },
+        {
+          "name": "Bitcoin",
+          "family": "utxo",
+          "role": "refused_settlement",
+          "assets": [
+            "BTC"
+          ]
+        },
+        {
+          "name": "Sui",
+          "family": "move",
+          "role": "refused_settlement",
+          "assets": [
+            "SUI"
+          ]
+        },
+        {
+          "name": "Bittensor",
+          "family": "tao",
+          "role": "refused_settlement",
+          "assets": [
+            "TAO"
+          ]
+        }
+      ],
+      "status": "aside",
+      "product_home": false
+    },
+    "all_other_chains_aside": true
+  }
+}

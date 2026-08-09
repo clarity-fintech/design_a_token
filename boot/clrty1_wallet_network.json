@@ -1,0 +1,17 @@
+{
+  "networkName": "CLRTY-1 Moniversive",
+  "rpcUrl": "https://exchange.clarity-fintech.com/v1/rpc",
+  "chainId": 1202,
+  "chainIdHex": "0x4b2",
+  "symbol": "CLRTY",
+  "nativeDecimals": 18,
+  "blockExplorer": "https://explorer.clarity-fintech.com",
+  "rpcMirrorNote": "Same-origin POST /v1/rpc on exchange hosts; must answer eth_chainId, net_version, eth_blockNumber for Coinbase Wallet add/switch.",
+  "blockchain": "moniversive",
+  "customMoniversiveChain": true,
+  "homeSettlementOnly": true,
+  "allOtherChainsAside": true,
+  "language": ".mis",
+  "kernel": "misc",
+  "ethereum": false
+}
