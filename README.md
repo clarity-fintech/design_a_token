@@ -120,3 +120,76 @@ Gates **CTE001–CTE100** · 399ms hard cap · CherryServers VDS `#939850`
 ## License
 
 UNLICENSED · Clarity Fintech / Volkov Intelligence Systems
+
+
+---
+
+<!-- CLRTY-DEVREF:START -->
+
+## Developer reference
+
+> Auto-generated command/architecture reference for **[`clarity-fintech/design_a_token`](https://github.com/clarity-fintech/design_a_token)**. The sections above are the maintained overview.
+
+### Get it running
+
+```bash
+git clone https://github.com/clarity-fintech/design_a_token
+cd design_a_token
+npm install
+npm run build
+cp .env.example .env   # configure (see Configuration)
+```
+
+### Command reference (npm scripts)
+
+| Command | Runs |
+|---|---|
+| `npm run build` | `npm run build:sdk && npm run build:site` |
+| `npm run build:site` | `npm run build -w @clrty/clarity-tokens-landing` |
+| `npm run build:sdk` | `npm run build -w @clrty/design-a-token-sdk` |
+| `npm run dev` | `npm run dev -w @clrty/clarity-tokens-landing` |
+| `npm run pack:index` | `python3 scripts/sync_from_clarity_tokens.py` |
+| `npm run hash:trace` | `python3 scripts/hash_trace.py` |
+| `npm run hash:stamp` | `python3 scripts/hash_trace.py --stamp` |
+| `npm run check:mis` | `bash scripts/check_mis.sh` |
+| `npm run connect` | `node scripts/connect_clrty1.mjs` |
+| `npm run design` | `node scripts/design_token.mjs` |
+| `npm run verify:pack` | `node scripts/verify_pack.mjs` |
+| `npm run test:e2e` | `cd site && npx playwright test --config=playwright.config.ts` |
+| `npm run verify` | `npm run verify:pack && npm run connect && npm run verify:clrty1-only` |
+| `npm run verify:clrty1-only` | `node scripts/verify_clrty1_settlement_only.mjs` |
+| `npm run verify:no-eth` | `python3 scripts/verify_clrty1_moniversive_no_eth.py` |
+
+### Architecture (tracked layout)
+
+| Path | Files |
+|---|---|
+| `site/` | 46 |
+| `boot/` | 15 |
+| `scripts/` | 9 |
+| `index/` | 6 |
+| `mis/` | 4 |
+| `packages/` | 4 |
+| `docs/` | 3 |
+| `e2e/` | 2 |
+| `templates/` | 2 |
+| `.github/` | 1 |
+
+### Configuration
+
+Copy `.env.example` → `.env`:
+
+| Variable | Default / example |
+|---|---|
+| `CLRTY_RPC_URL` | `https://rpc.clarity-fintech.com` |
+| `CLRTY_API_URL` | `https://api.clarity-fintech.com` |
+| `CLRTY_CHAIN_ID` | `1202` |
+| `CLRTY_NETWORK` | `clrty-1` |
+| `MISC_BIN` | _(required)_ |
+
+### Settlement context
+
+Part of the **CLRTY-1** ecosystem (chain **1202**). MIS modules are compiled by the
+[CLRTY-MIS-Kernel](https://github.com/clarity-fintech/CLRTY-MIS-Kernel) `misc` compiler.
+
+<!-- CLRTY-DEVREF:END -->
