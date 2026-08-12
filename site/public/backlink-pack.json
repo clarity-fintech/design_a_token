@@ -17379,8 +17379,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui",
-      "label": "github.com/realms-governance-ui",
+      "url": "https://github.com/clarity-fintech/governance-ui",
+      "label": "github.com/governance-ui",
       "lane": "dx",
       "category": "Developer \u00b7 GitHub",
       "sources": [
@@ -17419,8 +17419,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core",
-      "label": "github.com/squads-v4-core",
+      "url": "https://github.com/clarity-fintech/teams",
+      "label": "github.com/teams",
       "lane": "dx",
       "category": "Developer \u00b7 GitHub",
       "sources": [
@@ -17439,8 +17439,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program",
-      "label": "github.com/superteam-grants-program",
+      "url": "https://github.com/clarity-fintech/grants-program",
+      "label": "github.com/grants-program",
       "lane": "dx",
       "category": "Developer \u00b7 GitHub",
       "sources": [
@@ -17449,8 +17449,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock",
-      "label": "github.com/tribeca-ve-lock",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock",
+      "label": "github.com/-veCLRTY-Lock",
       "lane": "dx",
       "category": "Developer \u00b7 GitHub",
       "sources": [
@@ -19181,7 +19181,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/packs/align_incentive.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/packs/align_incentive.mis",
       "label": "github.com/align_incentive.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -19361,7 +19361,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/packs/audit_trail.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/packs/audit_trail.mis",
       "label": "github.com/audit_trail.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -20414,7 +20414,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/sections/ClrtyMisKernelRepo.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/sections/ClrtyMisKernelRepo.mis",
       "label": "github.com/ClrtyMisKernelRepo.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -20450,7 +20450,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/sections/ClrtyMisKernelRepo.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/sections/ClrtyMisKernelRepo.mis",
       "label": "github.com/ClrtyMisKernelRepo.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -20477,7 +20477,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/sections/ClrtyMisKernelRepo.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/sections/ClrtyMisKernelRepo.mis",
       "label": "github.com/ClrtyMisKernelRepo.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -20486,7 +20486,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/sections/ClrtyMisKernelRepo.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/sections/ClrtyMisKernelRepo.mis",
       "label": "github.com/ClrtyMisKernelRepo.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -21053,7 +21053,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/tree/main/mis/commands",
+      "url": "https://github.com/clarity-fintech/governance-ui/tree/main/mis/commands",
       "label": "github.com/commands",
       "lane": "dx_other",
       "category": "DX repos",
@@ -21116,7 +21116,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/tree/main/mis/commands",
+      "url": "https://github.com/clarity-fintech/teams/tree/main/mis/commands",
       "label": "github.com/commands",
       "lane": "dx_other",
       "category": "DX repos",
@@ -21143,7 +21143,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/tree/main/mis/commands",
+      "url": "https://github.com/clarity-fintech/grants-program/tree/main/mis/commands",
       "label": "github.com/commands",
       "lane": "dx_other",
       "category": "DX repos",
@@ -21152,7 +21152,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/tree/main/mis/commands",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/tree/main/mis/commands",
       "label": "github.com/commands",
       "lane": "dx_other",
       "category": "DX repos",
@@ -21359,7 +21359,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/packs/dashboard_bind.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/packs/dashboard_bind.mis",
       "label": "github.com/dashboard_bind.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -21602,7 +21602,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/packs/execute_window.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/packs/execute_window.mis",
       "label": "github.com/execute_window.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -22088,7 +22088,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/sections/GradientBand.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/sections/GradientBand.mis",
       "label": "github.com/GradientBand.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -22124,7 +22124,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/sections/GradientBand.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/sections/GradientBand.mis",
       "label": "github.com/GradientBand.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -22151,7 +22151,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/sections/GradientBand.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/sections/GradientBand.mis",
       "label": "github.com/GradientBand.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -22160,7 +22160,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/sections/GradientBand.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/sections/GradientBand.mis",
       "label": "github.com/GradientBand.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -22178,7 +22178,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/packs/grant_track.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/packs/grant_track.mis",
       "label": "github.com/grant_track.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -22187,7 +22187,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/packs/granular_role.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/packs/granular_role.mis",
       "label": "github.com/granular_role.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -23069,7 +23069,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/tree/main/mis/kernel",
+      "url": "https://github.com/clarity-fintech/governance-ui/tree/main/mis/kernel",
       "label": "github.com/kernel",
       "lane": "dx_other",
       "category": "DX repos",
@@ -23132,7 +23132,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/tree/main/mis/kernel",
+      "url": "https://github.com/clarity-fintech/teams/tree/main/mis/kernel",
       "label": "github.com/kernel",
       "lane": "dx_other",
       "category": "DX repos",
@@ -23159,7 +23159,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/tree/main/mis/kernel",
+      "url": "https://github.com/clarity-fintech/grants-program/tree/main/mis/kernel",
       "label": "github.com/kernel",
       "lane": "dx_other",
       "category": "DX repos",
@@ -23168,7 +23168,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/tree/main/mis/kernel",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/tree/main/mis/kernel",
       "label": "github.com/kernel",
       "lane": "dx_other",
       "category": "DX repos",
@@ -23582,7 +23582,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/sections/LanguageRoot.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/sections/LanguageRoot.mis",
       "label": "github.com/LanguageRoot.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -23618,7 +23618,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/sections/LanguageRoot.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/sections/LanguageRoot.mis",
       "label": "github.com/LanguageRoot.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -23645,7 +23645,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/sections/LanguageRoot.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/sections/LanguageRoot.mis",
       "label": "github.com/LanguageRoot.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -23654,7 +23654,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/sections/LanguageRoot.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/sections/LanguageRoot.mis",
       "label": "github.com/LanguageRoot.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -23798,7 +23798,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/packs/lock_duration.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/packs/lock_duration.mis",
       "label": "github.com/lock_duration.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -24311,7 +24311,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/tree/main",
+      "url": "https://github.com/clarity-fintech/governance-ui/tree/main",
       "label": "github.com/main",
       "lane": "dx_other",
       "category": "DX repos",
@@ -24374,7 +24374,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/tree/main",
+      "url": "https://github.com/clarity-fintech/teams/tree/main",
       "label": "github.com/main",
       "lane": "dx_other",
       "category": "DX repos",
@@ -24401,7 +24401,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/tree/main",
+      "url": "https://github.com/clarity-fintech/grants-program/tree/main",
       "label": "github.com/main",
       "lane": "dx_other",
       "category": "DX repos",
@@ -24410,7 +24410,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/tree/main",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/tree/main",
       "label": "github.com/main",
       "lane": "dx_other",
       "category": "DX repos",
@@ -24608,7 +24608,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/packs/milestone_escrow.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/packs/milestone_escrow.mis",
       "label": "github.com/milestone_escrow.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -24905,7 +24905,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/sections/MisAllCodeIndex.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/sections/MisAllCodeIndex.mis",
       "label": "github.com/MisAllCodeIndex.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -24941,7 +24941,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/sections/MisAllCodeIndex.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/sections/MisAllCodeIndex.mis",
       "label": "github.com/MisAllCodeIndex.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -24968,7 +24968,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/sections/MisAllCodeIndex.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/sections/MisAllCodeIndex.mis",
       "label": "github.com/MisAllCodeIndex.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -24977,7 +24977,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/sections/MisAllCodeIndex.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/sections/MisAllCodeIndex.mis",
       "label": "github.com/MisAllCodeIndex.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -25274,7 +25274,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/sections/MisArchitecture.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/sections/MisArchitecture.mis",
       "label": "github.com/MisArchitecture.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -25310,7 +25310,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/sections/MisArchitecture.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/sections/MisArchitecture.mis",
       "label": "github.com/MisArchitecture.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -25337,7 +25337,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/sections/MisArchitecture.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/sections/MisArchitecture.mis",
       "label": "github.com/MisArchitecture.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -25346,7 +25346,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/sections/MisArchitecture.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/sections/MisArchitecture.mis",
       "label": "github.com/MisArchitecture.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -25643,7 +25643,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/backlinks/MisBacklinkIndex.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/backlinks/MisBacklinkIndex.mis",
       "label": "github.com/MisBacklinkIndex.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -25679,7 +25679,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/backlinks/MisBacklinkIndex.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/backlinks/MisBacklinkIndex.mis",
       "label": "github.com/MisBacklinkIndex.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -25706,7 +25706,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/backlinks/MisBacklinkIndex.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/backlinks/MisBacklinkIndex.mis",
       "label": "github.com/MisBacklinkIndex.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -25715,7 +25715,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/backlinks/MisBacklinkIndex.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/backlinks/MisBacklinkIndex.mis",
       "label": "github.com/MisBacklinkIndex.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -26012,7 +26012,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/sections/MiscCompiler.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/sections/MiscCompiler.mis",
       "label": "github.com/MiscCompiler.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -26048,7 +26048,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/sections/MiscCompiler.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/sections/MiscCompiler.mis",
       "label": "github.com/MiscCompiler.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -26075,7 +26075,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/sections/MiscCompiler.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/sections/MiscCompiler.mis",
       "label": "github.com/MiscCompiler.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -26084,7 +26084,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/sections/MiscCompiler.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/sections/MiscCompiler.mis",
       "label": "github.com/MiscCompiler.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -26381,7 +26381,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/sections/MisChainIntake.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/sections/MisChainIntake.mis",
       "label": "github.com/MisChainIntake.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -26417,7 +26417,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/sections/MisChainIntake.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/sections/MisChainIntake.mis",
       "label": "github.com/MisChainIntake.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -26444,7 +26444,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/sections/MisChainIntake.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/sections/MisChainIntake.mis",
       "label": "github.com/MisChainIntake.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -26453,7 +26453,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/sections/MisChainIntake.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/sections/MisChainIntake.mis",
       "label": "github.com/MisChainIntake.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -26750,7 +26750,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/sections/MisCodeIndex.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/sections/MisCodeIndex.mis",
       "label": "github.com/MisCodeIndex.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -26786,7 +26786,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/sections/MisCodeIndex.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/sections/MisCodeIndex.mis",
       "label": "github.com/MisCodeIndex.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -26813,7 +26813,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/sections/MisCodeIndex.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/sections/MisCodeIndex.mis",
       "label": "github.com/MisCodeIndex.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -26822,7 +26822,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/sections/MisCodeIndex.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/sections/MisCodeIndex.mis",
       "label": "github.com/MisCodeIndex.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -27119,7 +27119,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/sections/MisEcosystemRepos.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/sections/MisEcosystemRepos.mis",
       "label": "github.com/MisEcosystemRepos.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -27155,7 +27155,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/sections/MisEcosystemRepos.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/sections/MisEcosystemRepos.mis",
       "label": "github.com/MisEcosystemRepos.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -27182,7 +27182,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/sections/MisEcosystemRepos.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/sections/MisEcosystemRepos.mis",
       "label": "github.com/MisEcosystemRepos.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -27191,7 +27191,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/sections/MisEcosystemRepos.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/sections/MisEcosystemRepos.mis",
       "label": "github.com/MisEcosystemRepos.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -27488,7 +27488,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/sections/MisKernelActiveOnly.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/sections/MisKernelActiveOnly.mis",
       "label": "github.com/MisKernelActiveOnly.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -27524,7 +27524,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/sections/MisKernelActiveOnly.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/sections/MisKernelActiveOnly.mis",
       "label": "github.com/MisKernelActiveOnly.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -27551,7 +27551,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/sections/MisKernelActiveOnly.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/sections/MisKernelActiveOnly.mis",
       "label": "github.com/MisKernelActiveOnly.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -27560,7 +27560,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/sections/MisKernelActiveOnly.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/sections/MisKernelActiveOnly.mis",
       "label": "github.com/MisKernelActiveOnly.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -27857,7 +27857,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/sections/MisKernelSource.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/sections/MisKernelSource.mis",
       "label": "github.com/MisKernelSource.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -27893,7 +27893,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/sections/MisKernelSource.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/sections/MisKernelSource.mis",
       "label": "github.com/MisKernelSource.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -27920,7 +27920,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/sections/MisKernelSource.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/sections/MisKernelSource.mis",
       "label": "github.com/MisKernelSource.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -27929,7 +27929,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/sections/MisKernelSource.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/sections/MisKernelSource.mis",
       "label": "github.com/MisKernelSource.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -28226,7 +28226,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/sections/MisNativeKernels.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/sections/MisNativeKernels.mis",
       "label": "github.com/MisNativeKernels.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -28262,7 +28262,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/sections/MisNativeKernels.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/sections/MisNativeKernels.mis",
       "label": "github.com/MisNativeKernels.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -28289,7 +28289,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/sections/MisNativeKernels.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/sections/MisNativeKernels.mis",
       "label": "github.com/MisNativeKernels.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -28298,7 +28298,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/sections/MisNativeKernels.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/sections/MisNativeKernels.mis",
       "label": "github.com/MisNativeKernels.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -28613,7 +28613,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/sections/MlKernelRepo.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/sections/MlKernelRepo.mis",
       "label": "github.com/MlKernelRepo.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -28649,7 +28649,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/sections/MlKernelRepo.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/sections/MlKernelRepo.mis",
       "label": "github.com/MlKernelRepo.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -28676,7 +28676,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/sections/MlKernelRepo.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/sections/MlKernelRepo.mis",
       "label": "github.com/MlKernelRepo.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -28685,7 +28685,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/sections/MlKernelRepo.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/sections/MlKernelRepo.mis",
       "label": "github.com/MlKernelRepo.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -29585,7 +29585,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/tree/main/mis/packs",
+      "url": "https://github.com/clarity-fintech/governance-ui/tree/main/mis/packs",
       "label": "github.com/packs",
       "lane": "dx_other",
       "category": "DX repos",
@@ -29648,7 +29648,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/tree/main/mis/packs",
+      "url": "https://github.com/clarity-fintech/teams/tree/main/mis/packs",
       "label": "github.com/packs",
       "lane": "dx_other",
       "category": "DX repos",
@@ -29675,7 +29675,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/tree/main/mis/packs",
+      "url": "https://github.com/clarity-fintech/grants-program/tree/main/mis/packs",
       "label": "github.com/packs",
       "lane": "dx_other",
       "category": "DX repos",
@@ -29684,7 +29684,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/tree/main/mis/packs",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/tree/main/mis/packs",
       "label": "github.com/packs",
       "lane": "dx_other",
       "category": "DX repos",
@@ -29828,7 +29828,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/packs/permission_tree.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/packs/permission_tree.mis",
       "label": "github.com/permission_tree.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -29864,7 +29864,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/packs/plugin_surface.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/packs/plugin_surface.mis",
       "label": "github.com/plugin_surface.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -29927,7 +29927,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/packs/programmatic_auth.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/packs/programmatic_auth.mis",
       "label": "github.com/programmatic_auth.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -29954,7 +29954,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/packs/proposal_view.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/packs/proposal_view.mis",
       "label": "github.com/proposal_view.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -30242,7 +30242,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/sections/ProtocolStructures.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/sections/ProtocolStructures.mis",
       "label": "github.com/ProtocolStructures.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -30278,7 +30278,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/sections/ProtocolStructures.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/sections/ProtocolStructures.mis",
       "label": "github.com/ProtocolStructures.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -30305,7 +30305,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/sections/ProtocolStructures.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/sections/ProtocolStructures.mis",
       "label": "github.com/ProtocolStructures.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -30314,7 +30314,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/sections/ProtocolStructures.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/sections/ProtocolStructures.mis",
       "label": "github.com/ProtocolStructures.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -30944,7 +30944,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/README.md",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/README.md",
       "label": "github.com/README.md",
       "lane": "dx_other",
       "category": "DX repos",
@@ -31007,7 +31007,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/README.md",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/README.md",
       "label": "github.com/README.md",
       "lane": "dx_other",
       "category": "DX repos",
@@ -31034,7 +31034,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/README.md",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/README.md",
       "label": "github.com/README.md",
       "lane": "dx_other",
       "category": "DX repos",
@@ -31043,7 +31043,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/README.md",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/README.md",
       "label": "github.com/README.md",
       "lane": "dx_other",
       "category": "DX repos",
@@ -31079,8 +31079,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/commands/RealmsGovernanceUiCommandCatalog.mis",
-      "label": "github.com/RealmsGovernanceUiCommandCatalog.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/commands/GovernanceUiCommandCatalog.mis",
+      "label": "github.com/GovernanceUiCommandCatalog.mis",
       "lane": "dx_other",
       "category": "DX repos",
       "sources": [
@@ -31088,8 +31088,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/commands/RealmsGovernanceUiCommands.mis",
-      "label": "github.com/RealmsGovernanceUiCommands.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/commands/GovernanceUiCommands.mis",
+      "label": "github.com/GovernanceUiCommands.mis",
       "lane": "dx_other",
       "category": "DX repos",
       "sources": [
@@ -31097,8 +31097,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/kernel/RealmsGovernanceUiKernel.mis",
-      "label": "github.com/RealmsGovernanceUiKernel.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/kernel/GovernanceUiKernel.mis",
+      "label": "github.com/GovernanceUiKernel.mis",
       "lane": "dx_other",
       "category": "DX repos",
       "sources": [
@@ -31106,8 +31106,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/commands/RealmsGovernanceUiNetworkBind.mis",
-      "label": "github.com/RealmsGovernanceUiNetworkBind.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/commands/GovernanceUiNetworkBind.mis",
+      "label": "github.com/GovernanceUiNetworkBind.mis",
       "lane": "dx_other",
       "category": "DX repos",
       "sources": [
@@ -31205,7 +31205,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/packs/release_gate.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/packs/release_gate.mis",
       "label": "github.com/release_gate.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -31538,8 +31538,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/commands/SquadsV4CoreCommandCatalog.mis",
-      "label": "github.com/SquadsV4CoreCommandCatalog.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/commands/TeamsCommandCatalog.mis",
+      "label": "github.com/TeamsCommandCatalog.mis",
       "lane": "dx_other",
       "category": "DX repos",
       "sources": [
@@ -31547,8 +31547,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/commands/SquadsV4CoreCommands.mis",
-      "label": "github.com/SquadsV4CoreCommands.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/commands/TeamsCommands.mis",
+      "label": "github.com/TeamsCommands.mis",
       "lane": "dx_other",
       "category": "DX repos",
       "sources": [
@@ -31556,8 +31556,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/kernel/SquadsV4CoreKernel.mis",
-      "label": "github.com/SquadsV4CoreKernel.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/kernel/TeamsKernel.mis",
+      "label": "github.com/TeamsKernel.mis",
       "lane": "dx_other",
       "category": "DX repos",
       "sources": [
@@ -31565,8 +31565,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/commands/SquadsV4CoreNetworkBind.mis",
-      "label": "github.com/SquadsV4CoreNetworkBind.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/commands/TeamsNetworkBind.mis",
+      "label": "github.com/TeamsNetworkBind.mis",
       "lane": "dx_other",
       "category": "DX repos",
       "sources": [
@@ -31736,8 +31736,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/commands/SuperteamGrantsProgramCommandCatalog.mis",
-      "label": "github.com/SuperteamGrantsProgramCommandCatalog.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/commands/GrantsProgramCommandCatalog.mis",
+      "label": "github.com/GrantsProgramCommandCatalog.mis",
       "lane": "dx_other",
       "category": "DX repos",
       "sources": [
@@ -31745,8 +31745,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/commands/SuperteamGrantsProgramCommands.mis",
-      "label": "github.com/SuperteamGrantsProgramCommands.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/commands/GrantsProgramCommands.mis",
+      "label": "github.com/GrantsProgramCommands.mis",
       "lane": "dx_other",
       "category": "DX repos",
       "sources": [
@@ -31754,8 +31754,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/kernel/SuperteamGrantsProgramKernel.mis",
-      "label": "github.com/SuperteamGrantsProgramKernel.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/kernel/GrantsProgramKernel.mis",
+      "label": "github.com/GrantsProgramKernel.mis",
       "lane": "dx_other",
       "category": "DX repos",
       "sources": [
@@ -31763,8 +31763,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/commands/SuperteamGrantsProgramNetworkBind.mis",
-      "label": "github.com/SuperteamGrantsProgramNetworkBind.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/commands/GrantsProgramNetworkBind.mis",
+      "label": "github.com/GrantsProgramNetworkBind.mis",
       "lane": "dx_other",
       "category": "DX repos",
       "sources": [
@@ -32141,7 +32141,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/sections/TickArchitecture.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/sections/TickArchitecture.mis",
       "label": "github.com/TickArchitecture.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -32177,7 +32177,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/sections/TickArchitecture.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/sections/TickArchitecture.mis",
       "label": "github.com/TickArchitecture.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -32204,7 +32204,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/sections/TickArchitecture.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/sections/TickArchitecture.mis",
       "label": "github.com/TickArchitecture.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -32213,7 +32213,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/sections/TickArchitecture.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/sections/TickArchitecture.mis",
       "label": "github.com/TickArchitecture.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -32510,7 +32510,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/sections/TickStakingGradient.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/sections/TickStakingGradient.mis",
       "label": "github.com/TickStakingGradient.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -32546,7 +32546,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/sections/TickStakingGradient.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/sections/TickStakingGradient.mis",
       "label": "github.com/TickStakingGradient.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -32573,7 +32573,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/sections/TickStakingGradient.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/sections/TickStakingGradient.mis",
       "label": "github.com/TickStakingGradient.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -32582,7 +32582,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/sections/TickStakingGradient.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/sections/TickStakingGradient.mis",
       "label": "github.com/TickStakingGradient.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -32609,7 +32609,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/packs/time_lock.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/packs/time_lock.mis",
       "label": "github.com/time_lock.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -32636,7 +32636,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/packs/treasury_action.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/packs/treasury_action.mis",
       "label": "github.com/treasury_action.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -32645,7 +32645,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/packs/treasury_dist.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/packs/treasury_dist.mis",
       "label": "github.com/treasury_dist.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -32654,8 +32654,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/commands/TribecaVeLockCommandCatalog.mis",
-      "label": "github.com/TribecaVeLockCommandCatalog.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/commands/VeClrtyLockCommandCatalog.mis",
+      "label": "github.com/VeClrtyLockCommandCatalog.mis",
       "lane": "dx_other",
       "category": "DX repos",
       "sources": [
@@ -32663,8 +32663,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/commands/TribecaVeLockCommands.mis",
-      "label": "github.com/TribecaVeLockCommands.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/commands/VeClrtyLockCommands.mis",
+      "label": "github.com/VeClrtyLockCommands.mis",
       "lane": "dx_other",
       "category": "DX repos",
       "sources": [
@@ -32672,8 +32672,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/kernel/TribecaVeLockKernel.mis",
-      "label": "github.com/TribecaVeLockKernel.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/kernel/VeClrtyLockKernel.mis",
+      "label": "github.com/VeClrtyLockKernel.mis",
       "lane": "dx_other",
       "category": "DX repos",
       "sources": [
@@ -32681,8 +32681,8 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/commands/TribecaVeLockNetworkBind.mis",
-      "label": "github.com/TribecaVeLockNetworkBind.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/commands/VeClrtyLockNetworkBind.mis",
+      "label": "github.com/VeClrtyLockNetworkBind.mis",
       "lane": "dx_other",
       "category": "DX repos",
       "sources": [
@@ -32762,7 +32762,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/packs/ve_lock.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/packs/ve_lock.mis",
       "label": "github.com/ve_lock.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -32816,7 +32816,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/packs/vote_delegate.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/packs/vote_delegate.mis",
       "label": "github.com/vote_delegate.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -32825,7 +32825,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/packs/vote_escrow.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/packs/vote_escrow.mis",
       "label": "github.com/vote_escrow.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -32897,7 +32897,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/packs/weight_curve.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/packs/weight_curve.mis",
       "label": "github.com/weight_curve.mis",
       "lane": "dx_other",
       "category": "DX repos",
@@ -43005,7 +43005,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/realms-governance-ui/blob/main/mis/sections/StaticMlCatalog.mis",
+      "url": "https://github.com/clarity-fintech/governance-ui/blob/main/mis/sections/StaticMlCatalog.mis",
       "label": "github.com/StaticMlCatalog.mis",
       "lane": "mis_ml",
       "category": ".mis \u00b7 MIS ML",
@@ -43050,7 +43050,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/squads-v4-core/blob/main/mis/sections/StaticMlCatalog.mis",
+      "url": "https://github.com/clarity-fintech/teams/blob/main/mis/sections/StaticMlCatalog.mis",
       "label": "github.com/StaticMlCatalog.mis",
       "lane": "mis_ml",
       "category": ".mis \u00b7 MIS ML",
@@ -43077,7 +43077,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/superteam-grants-program/blob/main/mis/sections/StaticMlCatalog.mis",
+      "url": "https://github.com/clarity-fintech/grants-program/blob/main/mis/sections/StaticMlCatalog.mis",
       "label": "github.com/StaticMlCatalog.mis",
       "lane": "mis_ml",
       "category": ".mis \u00b7 MIS ML",
@@ -43086,7 +43086,7 @@
       ]
     },
     {
-      "url": "https://github.com/clarity-fintech/tribeca-ve-lock/blob/main/mis/sections/StaticMlCatalog.mis",
+      "url": "https://github.com/clarity-fintech/-veCLRTY-Lock/blob/main/mis/sections/StaticMlCatalog.mis",
       "label": "github.com/StaticMlCatalog.mis",
       "lane": "mis_ml",
       "category": ".mis \u00b7 MIS ML",
